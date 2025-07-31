@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.medali-mas.abuamar.site/sitemap.xml
+
+# Disallow admin or development files
+Disallow: /admin
+Disallow: /*.log
