@@ -35,9 +35,9 @@ export default {
         }
       },
       fontFamily: {
-        'sans': ['ui-sans-serif', 'system-ui', 'sans-serif'],
+        'sans': ['Signika', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         'serif': ['Playfair Display', 'serif'],
-      }
+      },
     },
   },
   plugins: [],
