@@ -44,33 +44,38 @@
       </div>
 
       <!-- Content overlay - always at bottom -->
-      <div class="absolute bottom-0 left-0 right-0 p-4 z-20">
+      <div class="absolute bottom-0 left-0 right-0 p-4 z-30">
         <!-- Mobile: Simple title always visible -->
         <div class="block md:hidden">
           <h3 class="text-white text-base font-bold line-clamp-2 drop-shadow-lg">{{ item.title }}</h3>
         </div>
 
-        <!-- Desktop: Full content on hover -->
+        <!-- Desktop: Hover content layout -->
         <div class="hidden md:block">
-          <!-- Title always visible -->
-          <h3 class="text-white text-lg font-bold mb-2 line-clamp-2 drop-shadow-lg transition-all duration-300">
+          <!-- Description - appears above title on hover -->
+          <div class="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out mb-3">
+            <p class="text-gray-200 text-sm line-clamp-2 drop-shadow-md relative z-40">{{ item.description }}</p>
+          </div>
+          
+          <!-- Title always visible at bottom -->
+          <h3 class="text-white text-lg font-bold line-clamp-2 drop-shadow-lg transition-all duration-500 relative z-40">
             {{ item.title }}
           </h3>
-          
-          <!-- Description and button on hover -->
-          <div class="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-            <p class="text-gray-200 text-sm mb-4 line-clamp-2 drop-shadow-md">{{ item.description }}</p>
-            <BaseButton
-              variant="outline"
-              size="sm"
-              rounded
-              class="bg-white/20 border-white/40 text-white hover:bg-white/30 backdrop-blur-sm shadow-lg transition-all duration-300"
-              @click.stop="$emit('preview', item)"
-            >
-              <Eye class="w-4 h-4 mr-2" />
-              Preview
-            </BaseButton>
-          </div>
+        </div>
+      </div>
+
+      <!-- Centered button - appears on hover -->
+      <div class="absolute inset-0 flex items-center justify-center z-20">
+        <div class="opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform scale-75 group-hover:scale-100">
+          <BaseButton
+            variant="primary"
+            size="md"
+            rounded
+            @click.stop="$emit('preview', item)"
+          >
+            <Eye class="w-5 h-5 mr-2" />
+            Preview
+          </BaseButton>
         </div>
       </div>
     </div>
