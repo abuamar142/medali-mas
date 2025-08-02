@@ -139,7 +139,7 @@
       
       <!-- WhatsApp Button -->
       <a
-        href="https://wa.me/6285736712477"
+        :href="`https://wa.me/${businessInfo.whatsapp}`"
         target="_blank"
         class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
       >
@@ -152,6 +152,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { MapPin, User, Calendar, MessageCircle } from '@/components/icons'
+import { businessInfo } from '@/data'
 
 const currentYear = computed(() => new Date().getFullYear())
 </script>

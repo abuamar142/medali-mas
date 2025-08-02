@@ -167,7 +167,7 @@ import { useTranslatedData } from '@/composables/useTranslatedData'
 import { useSEO } from '@/composables/useSEO'
 import BaseButton from '@/components/ui/BaseButton.vue'
 import GalleryItem from '@/components/gallery/GalleryItem.vue'
-import { galleryItems } from '@/data'
+import { galleryItems, businessInfo } from '@/data'
 import type { GalleryItem as GalleryItemType } from '@/types'
 import { Image, MessageCircle, Share2, ArrowLeft } from '@/components/icons'
 
@@ -208,7 +208,7 @@ const handleImageError = () => {
 const contactForProduct = () => {
   // Redirect to contact section with product info
   const message = encodeURIComponent(`Halo, saya tertarik dengan produk "${product.value?.title}". Bisa tolong berikan informasi lebih lanjut?`)
-  const whatsappUrl = `https://wa.me/6281234567890?text=${message}`
+  const whatsappUrl = `https://wa.me/${businessInfo.whatsapp}?text=${message}`
   window.open(whatsappUrl, '_blank')
 }
 
