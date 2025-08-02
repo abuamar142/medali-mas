@@ -1,31 +1,51 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
     <!-- Loading State -->
-    <div v-if="!product" class="flex items-center justify-center min-h-screen">
+    <div
+      v-if="!product"
+      class="flex items-center justify-center min-h-screen"
+    >
       <div class="text-center">
-        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600 mx-auto mb-4"></div>
-        <p class="text-gray-600">{{ $t('common.loading') }}</p>
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600 mx-auto mb-4" />
+        <p class="text-gray-600">
+          {{ $t('common.loading') }}
+        </p>
       </div>
     </div>
 
     <!-- Product Detail -->
-    <div v-else class="container mx-auto px-4 py-8 lg:py-16">
+    <div
+      v-else
+      class="container mx-auto px-4 py-8 lg:py-16"
+    >
       <!-- Breadcrumb -->
       <nav class="mb-8">
         <ol class="flex items-center space-x-2 text-sm text-gray-600">
           <li>
-            <router-link to="/" class="hover:text-amber-600 transition-colors">
+            <router-link
+              to="/"
+              class="hover:text-amber-600 transition-colors"
+            >
               {{ $t('common.home') }}
             </router-link>
           </li>
-          <li class="text-gray-400">/</li>
+          <li class="text-gray-400">
+            /
+          </li>
           <li>
-            <router-link to="/#gallery" class="hover:text-amber-600 transition-colors">
+            <router-link
+              to="/#gallery"
+              class="hover:text-amber-600 transition-colors"
+            >
               {{ $t('gallery.title') }}
             </router-link>
           </li>
-          <li class="text-gray-400">/</li>
-          <li class="text-gray-800 font-medium">{{ product.title }}</li>
+          <li class="text-gray-400">
+            /
+          </li>
+          <li class="text-gray-800 font-medium">
+            {{ product.title }}
+          </li>
         </ol>
       </nav>
 
@@ -40,7 +60,7 @@
               :alt="product.title"
               class="w-full h-full object-cover"
               @error="handleImageError"
-            />
+            >
             <div 
               v-else
               class="w-full h-full bg-gradient-to-br from-amber-200 via-orange-300 to-red-400 flex items-center justify-center"
@@ -49,7 +69,9 @@
                 <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Image class="w-8 h-8" />
                 </div>
-                <p class="font-medium">{{ product.title }}</p>
+                <p class="font-medium">
+                  {{ product.title }}
+                </p>
               </div>
             </div>
           </div>
@@ -65,8 +87,12 @@
         <!-- Product Info -->
         <div class="space-y-8">
           <div>
-            <h1 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">{{ product.title }}</h1>
-            <p class="text-lg text-gray-600 leading-relaxed">{{ product.description }}</p>
+            <h1 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+              {{ product.title }}
+            </h1>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              {{ product.description }}
+            </p>
           </div>
 
           <!-- Action Buttons -->
@@ -110,7 +136,10 @@
       </div>
 
       <!-- Related Products -->
-      <div v-if="relatedProducts.length > 0" class="bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
+      <div
+        v-if="relatedProducts.length > 0"
+        class="bg-white rounded-3xl p-8 lg:p-12 shadow-xl"
+      >
         <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-8 text-center">
           {{ $t('product.related') }}
         </h2>
@@ -134,7 +163,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 import { useTranslatedData } from '@/composables/useTranslatedData'
 import { useSEO } from '@/composables/useSEO'
 import BaseButton from '@/components/ui/BaseButton.vue'
@@ -145,7 +173,6 @@ import { Image, MessageCircle, Share2, ArrowLeft } from '@/components/icons'
 
 const route = useRoute()
 const router = useRouter()
-const { t } = useI18n()
 const { categories } = useTranslatedData()
 const { setProductSEO } = useSEO()
 

@@ -4,7 +4,10 @@ import Footer from './components/layout/Footer.vue';
 </script>
 
 <template>
-  <div id="app" class="min-h-screen bg-white font-sans antialiased">
+  <div
+    id="app"
+    class="min-h-screen bg-white font-sans antialiased"
+  >
     <Header />
     <main>
       <router-view />

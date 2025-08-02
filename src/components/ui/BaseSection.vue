@@ -1,25 +1,43 @@
 <template>
-  <section :id="id" :class="sectionClasses">
+  <section
+    :id="id"
+    :class="sectionClasses"
+  >
     <div :class="containerClasses">
       <!-- Section Header -->
-      <div v-if="$slots.header || title || subtitle" :class="headerClasses">
+      <div
+        v-if="$slots.header || title || subtitle"
+        :class="headerClasses"
+      >
         <slot name="header">
-          <h2 v-if="title" :class="titleClasses">
-            <span v-html="title"></span>
+          <h2
+            v-if="title"
+            :class="titleClasses"
+          >
+            <span v-html="title" />
           </h2>
-          <p v-if="subtitle" :class="subtitleClasses">
+          <p
+            v-if="subtitle"
+            :class="subtitleClasses"
+          >
             {{ subtitle }}
           </p>
         </slot>
       </div>
 
       <!-- Section Content -->
-      <div v-if="$slots.default" :class="contentClasses">
+      <div
+        v-if="$slots.default"
+        :class="contentClasses"
+      >
         <slot />
       </div>
 
       <!-- Section Footer -->
-      <div v-if="$slots.footer" :class="footerClasses">
+      <div
+        v-if="$slots.footer"
+        :class="footerClasses"
+      >
         <slot name="footer" />
       </div>
     </div>

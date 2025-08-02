@@ -32,22 +32,35 @@
     <!-- Process Gallery -->
     <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
       <div class="text-center mb-12">
-        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">{{ $t('gallery.process.title') }}</h3>
+        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+          {{ $t('gallery.process.title') }}
+        </h3>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
           {{ $t('gallery.process.subtitle') }}
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div v-for="(step, index) in processSteps" :key="index" class="text-center group">
+        <div
+          v-for="(step, index) in processSteps"
+          :key="index"
+          class="text-center group"
+        >
           <div class="relative mb-6">
             <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
               <span class="text-xl sm:text-2xl font-bold text-white">{{ index + 1 }}</span>
             </div>
-            <div v-if="index < processSteps.length - 1" class="hidden lg:block absolute top-8 sm:top-10 left-full w-full h-0.5 bg-gradient-to-r from-amber-300 to-orange-400 -translate-x-2"></div>
+            <div
+              v-if="index < processSteps.length - 1"
+              class="hidden lg:block absolute top-8 sm:top-10 left-full w-full h-0.5 bg-gradient-to-r from-amber-300 to-orange-400 -translate-x-2"
+            />
           </div>
-          <h4 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3">{{ step.title }}</h4>
-          <p class="text-gray-600 text-sm sm:text-base">{{ step.description }}</p>
+          <h4 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3">
+            {{ step.title }}
+          </h4>
+          <p class="text-gray-600 text-sm sm:text-base">
+            {{ step.description }}
+          </p>
         </div>
       </div>
     </div>
@@ -55,7 +68,9 @@
     <template #footer>
       <!-- CTA Section -->
       <div class="text-center bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
-        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">{{ $t('gallery.cta.title') }}</h3>
+        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
+          {{ $t('gallery.cta.title') }}
+        </h3>
         <p class="text-base sm:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
           {{ $t('gallery.cta.description') }}
         </p>
@@ -94,26 +109,45 @@
     size="xl"
     @close="closeImageModal"
   >
-    <div v-if="selectedImage" class="text-center">
+    <div
+      v-if="selectedImage"
+      class="text-center"
+    >
       <img 
         :src="selectedImage.image" 
         :alt="selectedImage.title"
         class="w-full max-h-[60vh] object-contain rounded-lg mb-4"
       >
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ selectedImage.title }}</h3>
-      <p class="text-gray-600 mb-4">{{ selectedImage.description }}</p>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">
+        {{ selectedImage.title }}
+      </h3>
+      <p class="text-gray-600 mb-4">
+        {{ selectedImage.description }}
+      </p>
       <div class="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
         {{ getCategoryName(selectedImage.category) }}
       </div>
     </div>
     
     <template #footer>
-      <BaseButton variant="secondary" @click="closeImageModal">
+      <BaseButton
+        variant="secondary"
+        @click="closeImageModal"
+      >
         {{ $t('gallery.modal.close') }}
       </BaseButton>
-      <BaseButton variant="primary" @click="shareImage">
-        <Share2 v-if="!isShared" class="w-4 h-4 mr-2" />
-        <Check v-else class="w-4 h-4 mr-2" />
+      <BaseButton
+        variant="primary"
+        @click="shareImage"
+      >
+        <Share2
+          v-if="!isShared"
+          class="w-4 h-4 mr-2"
+        />
+        <Check
+          v-else
+          class="w-4 h-4 mr-2"
+        />
         {{ isShared ? $t('gallery.modal.copied') : $t('gallery.modal.share') }}
       </BaseButton>
     </template>

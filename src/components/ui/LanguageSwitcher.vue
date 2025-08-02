@@ -1,15 +1,18 @@
 <template>
   <div class="relative">
     <button
-      @click="isOpen = !isOpen"
       class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 border border-gray-300 transition-colors duration-200 text-gray-800 min-w-[120px] justify-between"
       :class="{ 'bg-gray-200 shadow-inner': isOpen }"
+      @click="isOpen = !isOpen"
     >
       <div class="flex items-center space-x-2">
         <span class="text-lg">{{ currentLocale.flag }}</span>
         <span class="font-medium text-sm">{{ currentLocale.code.toUpperCase() }}</span>
       </div>
-      <ChevronDown class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': isOpen }" />
+      <ChevronDown
+        class="w-4 h-4 transition-transform duration-200"
+        :class="{ 'rotate-180': isOpen }"
+      />
     </button>
 
     <Transition
@@ -25,16 +28,16 @@
         class="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden z-50 min-w-[200px]"
       >
         <button
-          v-for="locale in availableLocales"
-          :key="locale.code"
-          @click="changeLocale(locale.code)"
+          v-for="localeOption in availableLocales"
+          :key="localeOption.code"
           class="w-full flex items-center space-x-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-200 text-left"
-          :class="{ 'bg-amber-50 text-amber-800': currentLocale.code === locale.code }"
+          :class="{ 'bg-amber-50 text-amber-800': currentLocale.code === localeOption.code }"
+          @click="changeLocale(localeOption.code)"
         >
-          <span class="text-lg">{{ locale.flag }}</span>
-          <span class="font-medium text-gray-800">{{ locale.name }}</span>
+          <span class="text-lg">{{ localeOption.flag }}</span>
+          <span class="font-medium text-gray-800">{{ localeOption.name }}</span>
           <CheckCircle 
-            v-if="currentLocale.code === locale.code" 
+            v-if="currentLocale.code === localeOption.code" 
             class="w-4 h-4 text-amber-600 ml-auto" 
           />
         </button>

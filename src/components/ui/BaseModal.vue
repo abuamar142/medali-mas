@@ -1,12 +1,18 @@
 <template>
   <Teleport to="body">
-    <Transition name="modal" appear>
-      <div v-if="isOpen" class="fixed inset-0 z-50 overflow-y-auto">
+    <Transition
+      name="modal"
+      appear
+    >
+      <div
+        v-if="isOpen"
+        class="fixed inset-0 z-50 overflow-y-auto"
+      >
         <!-- Backdrop -->
         <div 
           class="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
           @click="closeModal"
-        ></div>
+        />
 
         <!-- Modal Content -->
         <div class="flex min-h-full items-center justify-center p-4">
@@ -15,17 +21,32 @@
             @click.stop
           >
             <!-- Header -->
-            <div v-if="$slots.header || title" class="flex items-center justify-between p-6 border-b border-gray-200">
+            <div
+              v-if="$slots.header || title"
+              class="flex items-center justify-between p-6 border-b border-gray-200"
+            >
               <slot name="header">
-                <h3 class="text-lg font-semibold text-gray-900">{{ title }}</h3>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  {{ title }}
+                </h3>
               </slot>
               <button 
                 v-if="showCloseButton"
-                @click="closeModal"
                 class="text-gray-400 hover:text-gray-600 transition-colors"
+                @click="closeModal"
               >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
@@ -36,7 +57,10 @@
             </div>
 
             <!-- Footer -->
-            <div v-if="$slots.footer" class="flex items-center justify-end gap-3 p-6 border-t border-gray-200">
+            <div
+              v-if="$slots.footer"
+              class="flex items-center justify-end gap-3 p-6 border-t border-gray-200"
+            >
               <slot name="footer" />
             </div>
           </div>

@@ -8,8 +8,12 @@
             <span class="text-white font-bold text-lg sm:text-xl">M</span>
           </div>
           <div>
-            <h1 class="text-lg sm:text-2xl font-bold text-gray-800">Medali Mas</h1>
-            <p class="text-xs text-gray-500 hidden sm:block">Tenun Ikat Kediri</p>
+            <h1 class="text-lg sm:text-2xl font-bold text-gray-800">
+              Medali Mas
+            </h1>
+            <p class="text-xs text-gray-500 hidden sm:block">
+              Tenun Ikat Kediri
+            </p>
           </div>
         </div>
 
@@ -51,9 +55,18 @@
             class="p-2"
             @click="toggleMobileMenu"
           >
-            <Transition name="fade" mode="out-in">
-              <Menu v-if="!isMobileMenuOpen" class="w-6 h-6" />
-              <X v-else class="w-6 h-6" />
+            <Transition
+              name="fade"
+              mode="out-in"
+            >
+              <Menu
+                v-if="!isMobileMenuOpen"
+                class="w-6 h-6"
+              />
+              <X
+                v-else
+                class="w-6 h-6"
+              />
             </Transition>
           </BaseButton>
         </div>
@@ -68,7 +81,10 @@
         leave-from-class="transform translate-y-0 opacity-100"
         leave-to-class="transform -translate-y-2 opacity-0"
       >
-        <div v-if="isMobileMenuOpen" class="lg:hidden py-4 border-t border-gray-200/50 bg-white/95 backdrop-blur-sm">
+        <div
+          v-if="isMobileMenuOpen"
+          class="lg:hidden py-4 border-t border-gray-200/50 bg-white/95 backdrop-blur-sm"
+        >
           <nav class="flex flex-col space-y-1">
             <a 
               v-for="item in navigationItems" 
@@ -78,18 +94,33 @@
               @click="closeMobileMenu"
             >
               <div class="flex items-center space-x-3">
-                <Home v-if="item.id === 'home'" class="w-5 h-5" />
-                <User v-else-if="item.id === 'about'" class="w-5 h-5" />
-                <Package v-else-if="item.id === 'products'" class="w-5 h-5" />
-                <Image v-else-if="item.id === 'gallery'" class="w-5 h-5" />
-                <Award v-else class="w-5 h-5" />
+                <Home
+                  v-if="item.id === 'home'"
+                  class="w-5 h-5"
+                />
+                <User
+                  v-else-if="item.id === 'about'"
+                  class="w-5 h-5"
+                />
+                <Package
+                  v-else-if="item.id === 'products'"
+                  class="w-5 h-5"
+                />
+                <Image
+                  v-else-if="item.id === 'gallery'"
+                  class="w-5 h-5"
+                />
+                <Award
+                  v-else
+                  class="w-5 h-5"
+                />
                 <span>{{ $t(`nav.${item.id}`) }}</span>
               </div>
             </a>
             <div class="pt-4 border-t border-gray-200/50 mt-4">
               <BaseButton
                 variant="primary"
-                fullWidth
+                full-width
                 rounded
                 tag="a"
                 href="#contact"

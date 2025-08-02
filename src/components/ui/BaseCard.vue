@@ -1,6 +1,9 @@
 <template>
   <div :class="cardClasses">
-    <div v-if="$slots.image || image" class="relative overflow-hidden">
+    <div
+      v-if="$slots.image || image"
+      class="relative overflow-hidden"
+    >
       <slot name="image">
         <img 
           v-if="image"
@@ -10,11 +13,20 @@
           loading="lazy"
         >
       </slot>
-      <div v-if="overlay" class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div
+        v-if="overlay"
+        class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      />
     </div>
     
-    <div v-if="$slots.default || $slots.header || $slots.content" :class="contentClasses">
-      <div v-if="$slots.header" class="mb-4">
+    <div
+      v-if="$slots.default || $slots.header || $slots.content"
+      :class="contentClasses"
+    >
+      <div
+        v-if="$slots.header"
+        class="mb-4"
+      >
         <slot name="header" />
       </div>
       
@@ -25,7 +37,10 @@
       <slot />
     </div>
     
-    <div v-if="$slots.footer" :class="footerClasses">
+    <div
+      v-if="$slots.footer"
+      :class="footerClasses"
+    >
       <slot name="footer" />
     </div>
   </div>

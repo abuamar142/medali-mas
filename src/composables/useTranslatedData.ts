@@ -1,6 +1,5 @@
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
-import { categories as originalCategories, processSteps as originalProcessSteps } from "@/data";
 import type { Category, ProcessStep } from "@/types";
 
 export function useTranslatedData() {

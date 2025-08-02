@@ -8,7 +8,10 @@
     :class="buttonClasses"
     @click="handleClick"
   >
-    <span v-if="loading" class="animate-spin rounded-full h-4 w-4 border-b-2 border-current mr-2"></span>
+    <span
+      v-if="loading"
+      class="animate-spin rounded-full h-4 w-4 border-b-2 border-current mr-2"
+    />
     <slot />
   </component>
 </template>

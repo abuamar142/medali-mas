@@ -10,8 +10,12 @@
               <span class="text-white font-bold text-xl">M</span>
             </div>
             <div>
-              <h3 class="text-xl font-bold">Medali Mas</h3>
-              <p class="text-amber-200 text-sm">Tenun Ikat Kediri</p>
+              <h3 class="text-xl font-bold">
+                Medali Mas
+              </h3>
+              <p class="text-amber-200 text-sm">
+                Tenun Ikat Kediri
+              </p>
             </div>
           </div>
           <p class="text-gray-300 leading-relaxed">
@@ -21,31 +25,67 @@
 
         <!-- Quick Links -->
         <div class="space-y-6">
-          <h4 class="text-lg font-semibold text-amber-300">{{ $t('footer.quickLinks') }}</h4>
+          <h4 class="text-lg font-semibold text-amber-300">
+            {{ $t('footer.quickLinks') }}
+          </h4>
           <nav class="space-y-3">
-            <a href="#hero" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.home') }}</a>
-            <a href="#about" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.about') }}</a>
-            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.products') }}</a>
-            <a href="#gallery" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.gallery') }}</a>
-            <a href="#achievements" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.achievements') }}</a>
-            <a href="#contact" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.contact') }}</a>
+            <a
+              href="#hero"
+              class="block text-gray-300 hover:text-amber-300 transition-colors duration-300"
+            >{{ $t('nav.home') }}</a>
+            <a
+              href="#about"
+              class="block text-gray-300 hover:text-amber-300 transition-colors duration-300"
+            >{{ $t('nav.about') }}</a>
+            <a
+              href="#products"
+              class="block text-gray-300 hover:text-amber-300 transition-colors duration-300"
+            >{{ $t('nav.products') }}</a>
+            <a
+              href="#gallery"
+              class="block text-gray-300 hover:text-amber-300 transition-colors duration-300"
+            >{{ $t('nav.gallery') }}</a>
+            <a
+              href="#achievements"
+              class="block text-gray-300 hover:text-amber-300 transition-colors duration-300"
+            >{{ $t('nav.achievements') }}</a>
+            <a
+              href="#contact"
+              class="block text-gray-300 hover:text-amber-300 transition-colors duration-300"
+            >{{ $t('nav.contact') }}</a>
           </nav>
         </div>
 
         <!-- Products -->
         <div class="space-y-6">
-          <h4 class="text-lg font-semibold text-amber-300">{{ $t('products.title') }}</h4>
+          <h4 class="text-lg font-semibold text-amber-300">
+            {{ $t('products.title') }}
+          </h4>
           <nav class="space-y-3">
-            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('gallery.categories.fabric') }}</a>
-            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('gallery.categories.fashion') }}</a>
-            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('gallery.categories.home') }}</a>
-            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('gallery.categories.partnership') }}</a>
+            <a
+              href="#products"
+              class="block text-gray-300 hover:text-amber-300 transition-colors duration-300"
+            >{{ $t('gallery.categories.fabric') }}</a>
+            <a
+              href="#products"
+              class="block text-gray-300 hover:text-amber-300 transition-colors duration-300"
+            >{{ $t('gallery.categories.fashion') }}</a>
+            <a
+              href="#products"
+              class="block text-gray-300 hover:text-amber-300 transition-colors duration-300"
+            >{{ $t('gallery.categories.home') }}</a>
+            <a
+              href="#products"
+              class="block text-gray-300 hover:text-amber-300 transition-colors duration-300"
+            >{{ $t('gallery.categories.partnership') }}</a>
           </nav>
         </div>
 
         <!-- Contact Info -->
         <div class="space-y-6">
-          <h4 class="text-lg font-semibold text-amber-300">{{ $t('footer.contact') }}</h4>
+          <h4 class="text-lg font-semibold text-amber-300">
+            {{ $t('footer.contact') }}
+          </h4>
           <div class="space-y-4">
             <div class="flex items-start space-x-3">
               <MapPin class="w-5 h-5 text-amber-400 mt-1 flex-shrink-0" />
@@ -75,7 +115,7 @@
       <div class="container mx-auto px-4 lg:px-8 py-6">
         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div class="text-gray-400 text-sm">
-            {{ $t('footer.copyright') }}
+            © {{ currentYear }} UD. Medali Mas. {{ $t('footer.allRightsReserved') }}
           </div>
           <div class="flex items-center space-x-6 text-sm text-gray-400">
             <span>{{ $t('footer.ukm') }}</span>
@@ -93,12 +133,16 @@
         <div class="bg-gray-800 text-white text-sm px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
           {{ $t('footer.chatTooltip') }}
           <!-- Arrow -->
-          <div class="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+          <div class="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800" />
         </div>
       </div>
       
       <!-- WhatsApp Button -->
-      <a href="https://wa.me/6285736712477" target="_blank" class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group">
+      <a
+        href="https://wa.me/6285736712477"
+        target="_blank"
+        class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+      >
         <MessageCircle class="w-7 h-7 text-white group-hover:scale-110 transition-transform duration-300" />
       </a>
     </div>
@@ -107,9 +151,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { MapPin, User, Calendar, MessageCircle } from '@/components/icons'
 
-const { t } = useI18n()
 const currentYear = computed(() => new Date().getFullYear())
 </script>

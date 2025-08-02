@@ -15,7 +15,7 @@
         referrerpolicy="no-referrer"
         @error="handleImageError"
         @load="handleImageLoad"
-      />
+      >
       
       <!-- Fallback for items without image or error -->
       <div 
@@ -26,15 +26,17 @@
           <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
             <Image class="w-6 h-6" />
           </div>
-          <p class="font-medium text-sm">{{ item.title }}</p>
+          <p class="font-medium text-sm">
+            {{ item.title }}
+          </p>
         </div>
       </div>
 
       <!-- Base gradient overlay for text readability -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
       <!-- Enhanced hover overlay -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <!-- Category Badge -->
       <div class="absolute top-4 left-4 z-20">
@@ -47,14 +49,18 @@
       <div class="absolute bottom-0 left-0 right-0 p-4 z-30">
         <!-- Mobile: Simple title always visible -->
         <div class="block md:hidden">
-          <h3 class="text-white text-base font-bold line-clamp-2 drop-shadow-lg">{{ item.title }}</h3>
+          <h3 class="text-white text-base font-bold line-clamp-2 drop-shadow-lg">
+            {{ item.title }}
+          </h3>
         </div>
 
         <!-- Desktop: Hover content layout -->
         <div class="hidden md:block">
           <!-- Description - appears above title on hover -->
           <div class="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out mb-3">
-            <p class="text-gray-200 text-sm line-clamp-2 drop-shadow-md relative z-40">{{ item.description }}</p>
+            <p class="text-gray-200 text-sm line-clamp-2 drop-shadow-md relative z-40">
+              {{ item.description }}
+            </p>
           </div>
           
           <!-- Title always visible at bottom -->
@@ -96,11 +102,6 @@ interface Props {
 
 const props = defineProps<Props>()
 
-const emit = defineEmits<{
-  click: [item: GalleryItem]
-  preview: [item: GalleryItem]
-}>()
-
 const imageError = ref(false)
 const imageLoaded = ref(false)
 
@@ -121,7 +122,7 @@ const handleClick = () => {
   window.location.href = `/product/${props.item.id}`
 }
 
-const handleImageError = (event: Event) => {
+const handleImageError = () => {
   console.warn('Image failed to load:', props.item.image)
   imageError.value = true
 }

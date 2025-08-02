@@ -1,10 +1,7 @@
-import { computed } from "vue";
-import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { galleryItems } from "@/data";
 
 export function useSEO() {
-  const route = useRoute();
   const { t } = useI18n();
 
   const setPageMeta = (title: string, description: string, image?: string) => {
