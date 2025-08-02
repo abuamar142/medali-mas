@@ -1,8 +1,8 @@
 <template>
   <BaseSection
     id="contact"
-    title='Hubungi <span class="text-amber-600">Kami</span>'
-    subtitle="Tertarik dengan produk tenun ikat kami? Jangan ragu untuk menghubungi kami"
+    :title="contactTitle"
+    :subtitle="$t('contact.subtitle')"
     background="amber"
     padding="xl"
     header-spacing="xl"
@@ -12,7 +12,7 @@
         <div class="space-y-8 h-full flex flex-col">
           <!-- Business Info -->
           <div class="bg-white rounded-3xl p-8 shadow-lg flex-1">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">Informasi Usaha</h3>
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">{{ $t('contact.businessInfo.title') }}</h3>
             
             <div class="space-y-6">
               <!-- Name -->
@@ -21,7 +21,7 @@
                   <Building class="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 class="text-lg font-semibold text-gray-800">Nama Usaha</h4>
+                  <h4 class="text-lg font-semibold text-gray-800">{{ $t('contact.businessInfo.name') }}</h4>
                   <p class="text-gray-600">{{ businessInfo.name }}</p>
                 </div>
               </div>
@@ -32,7 +32,7 @@
                   <User class="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 class="text-lg font-semibold text-gray-800">Pemilik</h4>
+                  <h4 class="text-lg font-semibold text-gray-800">{{ $t('contact.businessInfo.owner') }}</h4>
                   <p class="text-gray-600">{{ businessInfo.owner }}</p>
                 </div>
               </div>
@@ -43,7 +43,7 @@
                   <Calendar class="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 class="text-lg font-semibold text-gray-800">Berdiri Sejak</h4>
+                  <h4 class="text-lg font-semibold text-gray-800">{{ $t('contact.businessInfo.foundedDate') }}</h4>
                   <p class="text-gray-600">{{ businessInfo.foundedDate }}</p>
                 </div>
               </div>
@@ -52,7 +52,7 @@
 
           <!-- Contact Details -->
           <div class="bg-white rounded-3xl p-8 shadow-lg flex-1">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">Kontak & Lokasi</h3>
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">{{ $t('contact.contactDetails.title') }}</h3>
             
             <div class="space-y-6">
               <!-- Address -->
@@ -61,7 +61,7 @@
                   <MapPin class="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 class="text-lg font-semibold text-gray-800">Alamat</h4>
+                  <h4 class="text-lg font-semibold text-gray-800">{{ $t('contact.contactDetails.address') }}</h4>
                   <a :href="businessInfo.addresses.main.mapUrl" target="_blank" class="text-blue-600 hover:text-blue-700 transition-colors duration-300 leading-relaxed">
                     {{ businessInfo.addresses.main.address }}
                   </a>
@@ -74,7 +74,7 @@
                   <Phone class="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 class="text-lg font-semibold text-gray-800">Telepon</h4>
+                  <h4 class="text-lg font-semibold text-gray-800">{{ $t('contact.contactDetails.phone') }}</h4>
                   <a :href="`https://wa.me/${businessInfo.whatsapp}`" target="_blank" class="text-green-600 hover:text-green-700 transition-colors duration-300">
                     {{ businessInfo.phone }}
                   </a>
@@ -87,7 +87,7 @@
                   <Instagram class="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 class="text-lg font-semibold text-gray-800">Instagram</h4>
+                  <h4 class="text-lg font-semibold text-gray-800">{{ $t('contact.contactDetails.instagram') }}</h4>
                   <a :href="`https://www.instagram.com/${businessInfo.instagram}`" target="_blank" class="text-pink-600 hover:text-pink-700 transition-colors duration-300">
                     @{{ businessInfo.instagram }}
                   </a>
@@ -101,7 +101,7 @@
         <div class="space-y-8 h-full flex flex-col">
           <!-- Location Tabs -->
           <div class="bg-white rounded-3xl p-8 shadow-lg flex-1 flex flex-col">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">Lokasi Workshop</h3>
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">{{ $t('contact.location.title') }}</h3>
             
             <!-- Tab Navigation -->
             <div class="flex space-x-4 mb-6">
@@ -114,7 +114,7 @@
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 ]"
               >
-                Workshop Utama
+                {{ $t('contact.location.mainWorkshop') }}
               </button>
               <button 
                 @click="activeMapTab = 'branch'"
@@ -125,7 +125,7 @@
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 ]"
               >
-                Lokasi Kedua
+                {{ $t('contact.location.secondLocation') }}
               </button>
             </div>
 
@@ -175,10 +175,10 @@
                   <MapPin class="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h4 class="font-semibold text-amber-800">Workshop Utama</h4>
+                  <h4 class="font-semibold text-amber-800">{{ $t('contact.location.mainWorkshop') }}</h4>
                   <p class="text-sm text-amber-700">{{ businessInfo.addresses.main.address }}</p>
                   <a :href="businessInfo.addresses.main.mapUrl" target="_blank" class="inline-flex items-center mt-2 text-sm text-amber-600 hover:text-amber-700 font-medium">
-                    Buka di Google Maps
+                    {{ $t('contact.location.openInMaps') }}
                     <ExternalLink class="w-4 h-4 ml-1" />
                   </a>
                 </div>
@@ -189,10 +189,10 @@
                   <MapPin class="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h4 class="font-semibold text-amber-800">Lokasi Kedua</h4>
+                  <h4 class="font-semibold text-amber-800">{{ $t('contact.location.secondLocation') }}</h4>
                   <p class="text-sm text-amber-700">{{ businessInfo.addresses.branch.address }}</p>
                   <a :href="businessInfo.addresses.branch.mapUrl" target="_blank" class="inline-flex items-center mt-2 text-sm text-amber-600 hover:text-amber-700 font-medium">
-                    Buka di Google Maps
+                    {{ $t('contact.location.openInMaps') }}
                     <ExternalLink class="w-4 h-4 ml-1" />
                   </a>
                 </div>
@@ -205,10 +205,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { businessInfo } from '@/data'
 import { Building, User, Calendar, MapPin, Phone, Instagram, ExternalLink } from '@/components/icons'
 import BaseSection from '@/components/ui/BaseSection.vue'
+
+const { t } = useI18n()
+
+const contactTitle = computed(() => {
+  return t('contact.title', { 
+    highlight: `<span class="text-amber-600">${t('contact.titleHighlight')}</span>` 
+  })
+})
 
 const activeMapTab = ref('main')
 const mapsLoaded = ref(false)

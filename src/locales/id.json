@@ -1,0 +1,295 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "products": "Produk",
+    "gallery": "Galeri",
+    "achievements": "Pencapaian",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "title": "Tenun Ikat Medali Mas",
+    "subtitle": "Warisan Budaya Kediri Sejak 1989",
+    "description": "Melestarikan keindahan tenun ikat tradisional dengan sentuhan modern. Produk berkualitas tinggi dari tangan-tangan terampil pengrajin Kediri.",
+    "cta": {
+      "products": "Lihat Produk Kami",
+      "contact": "Hubungi Kami"
+    },
+    "features": {
+      "experience": {
+        "title": "Sejak 1989",
+        "description": "Pengalaman lebih dari 35 tahun"
+      },
+      "quality": {
+        "title": "Kualitas Terjamin",
+        "description": "Produk berkualitas tinggi"
+      },
+      "workers": {
+        "title": "60 Pekerja",
+        "description": "Tim pengrajin berpengalaman"
+      }
+    }
+  },
+  "about": {
+    "title": "Tentang {highlight}",
+    "titleHighlight": "Medali Mas",
+    "subtitle": "Perjalanan panjang dalam melestarikan warisan budaya tenun ikat Kediri",
+    "story": {
+      "title": "Sejarah Singkat",
+      "content": "Didirikan oleh Bapak Munawar pada 27 Februari 1989, UD. Medali Mas telah berkembang dari usaha rumahan menjadi salah satu UKM unggulan Kota Kediri dalam bidang tenun ikat."
+    },
+    "vision": {
+      "title": "Visi & Misi",
+      "content": "Melestarikan dan mengembangkan seni tenun ikat tradisional dengan inovasi modern, menciptakan produk berkualitas tinggi yang membanggakan budaya Indonesia."
+    },
+    "location": {
+      "title": "Lokasi",
+      "content": "Beralamat di Jl. KH. Agus Salim Gg. VIII, No. 54 C, Kelurahan Bandar Kidul, Kecamatan Mojoroto, Kota Kediri - pusat sentra tenun ikat tradisional."
+    },
+    "gallery": {
+      "process": "Proses Tenun",
+      "motifs": "Motif Tradisional",
+      "products": "Produk Jadi",
+      "workshop": "Workshop"
+    },
+    "stats": {
+      "experience": "Tahun Pengalaman",
+      "workers": "Tenaga Kerja",
+      "revenue": "Omset Bulanan",
+      "regions": "Daerah Pemasaran"
+    }
+  },
+  "products": {
+    "title": "Produk {highlight}",
+    "titleHighlight": "Unggulan",
+    "subtitle": "Beragam produk tenun ikat berkualitas tinggi dengan desain tradisional dan modern",
+    "categories": {
+      "fabric": {
+        "title": "Kain Tenun Ikat",
+        "description": "Kain berkualitas tinggi dengan motif tradisional",
+        "items": [
+          "Jenis Misris (Rp 125.000 - Rp 195.000)",
+          "Semi Sutra (Rp 300.000)",
+          "Kain Sutra Import"
+        ]
+      },
+      "fashion": {
+        "title": "Fashion & Aksesoris",
+        "description": "Produk fashion dengan sentuhan tenun ikat",
+        "items": ["Shal Tenun", "Sarung Tenun", "Tas Souvenir"]
+      },
+      "home": {
+        "title": "Dekorasi Rumah",
+        "description": "Dekorasi rumah dengan nuansa tradisional",
+        "items": ["Kain Penutup Tisu", "Kain Penutup Galon Air", "Kain Penutup Gelas"]
+      }
+    },
+    "partnership": {
+      "title": "Produk Kemitraan",
+      "subtitle": "Berkolaborasi dengan UKM lain untuk menghadirkan produk inovatif berbahan dasar tenun ikat",
+      "items": [
+        {
+          "name": "UKM Den Yu",
+          "description": "Sepatu & Sandal bermotif tenun ikat"
+        },
+        {
+          "name": "UKM Gakris",
+          "description": "Tas berbahan dasar kain tenun"
+        },
+        {
+          "name": "UD Sinar Sejati",
+          "description": "Produk dekorasi rumah tangga"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Tertarik dengan Produk Kami?",
+      "description": "Hubungi kami untuk informasi lebih lanjut tentang produk dan harga terkini",
+      "contact": "Hubungi Kami",
+      "gallery": "Lihat Galeri"
+    }
+  },
+  "achievements": {
+    "title": "Prestasi & {highlight}",
+    "titleHighlight": "Penghargaan",
+    "subtitle": "Pencapaian dan pengakuan atas dedikasi dalam melestarikan budaya tenun ikat",
+    "mainAchievements": [
+      {
+        "title": "Upakarti 2010",
+        "description": "Menerima penghargaan Upakarti kategori Kepeloporan 2010 atas kontribusi dalam mengembangkan industri tenun ikat di Kediri.",
+        "category": "Kategori: Kepeloporan"
+      },
+      {
+        "title": "UKM Award 2008",
+        "description": "Meraih UKM Award Parasanya Kerta Nugraha 2008 sebagai pengakuan atas kualitas produk dan inovasi.",
+        "category": "Parasanya Kerta Nugraha"
+      }
+    ],
+    "additionalAchievements": [
+      {
+        "title": "Sertifikat Instruktur",
+        "issuer": "Dinsosnakertrans 2011",
+        "description": "Ditunjuk sebagai instruktur pelatihan pengembangan tenun dalam pembinaan penyandang masalah kesejahteraan sosial."
+      },
+      {
+        "title": "Nominasi Pro Poor Award",
+        "issuer": "Gubernur Jawa Timur 2012",
+        "description": "Nominasi terbaik kategori perorangan lomba karya penanggulangan kemiskinan dari Gubernur Jawa Timur."
+      }
+    ],
+    "statistics": {
+      "title": "Pencapaian Bisnis",
+      "subtitle": "Pertumbuhan dan perkembangan yang signifikan dalam industri tenun ikat",
+      "items": [
+        {
+          "value": "100M+",
+          "label": "Omset Bulanan",
+          "unit": "Rupiah"
+        },
+        {
+          "value": "60",
+          "label": "Tenaga Kerja",
+          "unit": "Orang"
+        },
+        {
+          "value": "10+",
+          "label": "Daerah Pemasaran",
+          "unit": "Wilayah"
+        },
+        {
+          "value": "35+",
+          "label": "Tahun Berkarya",
+          "unit": "Sejak 1989"
+        }
+      ]
+    },
+    "recognition": {
+      "title": "Diakui Kualitasnya",
+      "items": [
+        {
+          "title": "Instansi Pemerintah",
+          "description": "Dipercaya untuk seragam kantor dan lembaga"
+        },
+        {
+          "title": "Masyarakat Luas",
+          "description": "Diminati oleh berbagai kalangan"
+        },
+        {
+          "title": "Ekspor Nusantara",
+          "description": "Tersebar hingga luar Pulau Jawa"
+        }
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Galeri {highlight}",
+    "titleHighlight": "Produk",
+    "subtitle": "Koleksi foto produk tenun ikat berkualitas tinggi dari Medali Mas",
+    "process": {
+      "title": "Proses Pembuatan",
+      "subtitle": "Dari benang hingga menjadi kain tenun ikat yang indah",
+      "steps": {
+        "preparation": {
+          "title": "Persiapan Benang",
+          "description": "Pemilihan dan persiapan benang berkualitas tinggi dengan standar terbaik"
+        },
+        "dyeing": {
+          "title": "Ikat & Celup",
+          "description": "Proses pengikatan dan pencelupan dengan teknik tradisional yang telah diwariskan"
+        },
+        "weaving": {
+          "title": "Penenunan",
+          "description": "Proses menenun menggunakan alat tenun bukan mesin (ATBM) oleh pengrajin berpengalaman"
+        },
+        "finishing": {
+          "title": "Finishing",
+          "description": "Penyelesaian akhir dan quality control untuk memastikan kualitas produk terbaik"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ingin Melihat Produk Secara Langsung?",
+      "description": "Kunjungi workshop kami di Kediri atau hubungi untuk konsultasi produk",
+      "visit": "Kunjungi Workshop",
+      "follow": "Follow Instagram"
+    },
+    "modal": {
+      "close": "Tutup",
+      "share": "Bagikan"
+    },
+    "categories": {
+      "all": "Semua Produk",
+      "fabric": "Kain Tenun",
+      "fashion": "Fashion",
+      "home": "Dekorasi Rumah",
+      "partnership": "Produk Kemitraan"
+    }
+  },
+  "contact": {
+    "title": "Hubungi {highlight}",
+    "titleHighlight": "Kami",
+    "subtitle": "Tertarik dengan produk tenun ikat kami? Jangan ragu untuk menghubungi kami",
+    "businessInfo": {
+      "title": "Informasi Usaha",
+      "name": "Nama Usaha",
+      "owner": "Pemilik",
+      "foundedDate": "Berdiri Sejak"
+    },
+    "contactDetails": {
+      "title": "Kontak & Lokasi",
+      "address": "Alamat",
+      "phone": "Telepon",
+      "instagram": "Instagram"
+    },
+    "location": {
+      "title": "Lokasi Workshop",
+      "mainWorkshop": "Workshop Utama",
+      "secondLocation": "Lokasi Kedua",
+      "openInMaps": "Buka di Google Maps"
+    },
+    "info": {
+      "address": "Alamat",
+      "phone": "Telepon",
+      "email": "Email",
+      "hours": "Jam Operasional"
+    },
+    "form": {
+      "name": "Nama Lengkap",
+      "email": "Email",
+      "phone": "Nomor Telepon",
+      "subject": "Subjek",
+      "message": "Pesan",
+      "send": "Kirim Pesan",
+      "sending": "Mengirim...",
+      "success": "Pesan berhasil dikirim!",
+      "error": "Terjadi kesalahan. Silakan coba lagi."
+    },
+    "social": {
+      "title": "Ikuti Kami",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "description": "Melestarikan keindahan tenun ikat tradisional dengan sentuhan modern sejak 1989.",
+    "quickLinks": "Tautan Cepat",
+    "contact": "Kontak",
+    "followUs": "Ikuti Kami",
+    "copyright": "© 2024 UD. Medali Mas. Semua hak cipta dilindungi."
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "retry": "Coba Lagi",
+    "close": "Tutup",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "submit": "Kirim",
+    "search": "Cari",
+    "filter": "Filter",
+    "sort": "Urutkan",
+    "more": "Selengkapnya",
+    "less": "Lebih Sedikit"
+  }
+}

@@ -1,8 +1,8 @@
 <template>
   <BaseSection
     id="about"
-    title='Tentang <span class="text-amber-600">Medali Mas</span>'
-    subtitle="Perjalanan panjang dalam melestarikan warisan budaya tenun ikat Kediri"
+    :title="aboutTitle"
+    :subtitle="$t('about.subtitle')"
     background="amber"
     padding="xl"
     header-spacing="xl"
@@ -20,10 +20,9 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold text-gray-800 mb-3">Sejarah Singkat</h3>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-3">{{ $t('about.story.title') }}</h3>
                   <p class="text-gray-600 leading-relaxed">
-                    Didirikan oleh Bapak Munawar pada 27 Februari 1989, UD. Medali Mas telah berkembang 
-                    dari usaha rumahan menjadi salah satu UKM unggulan Kota Kediri dalam bidang tenun ikat.
+                    {{ $t('about.story.content') }}
                   </p>
                 </div>
               </div>
@@ -39,10 +38,9 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold text-gray-800 mb-3">Visi & Misi</h3>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-3">{{ $t('about.vision.title') }}</h3>
                   <p class="text-gray-600 leading-relaxed">
-                    Melestarikan dan mengembangkan seni tenun ikat tradisional dengan inovasi modern, 
-                    menciptakan produk berkualitas tinggi yang membanggakan budaya Indonesia.
+                    {{ $t('about.vision.content') }}
                   </p>
                 </div>
               </div>
@@ -58,10 +56,9 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold text-gray-800 mb-3">Lokasi</h3>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-3">{{ $t('about.location.title') }}</h3>
                   <p class="text-gray-600 leading-relaxed">
-                    Beralamat di Jl. KH. Agus Salim Gg. VIII, No. 54 C, Kelurahan Bandar Kidul, 
-                    Kecamatan Mojoroto, Kota Kediri - pusat sentra tenun ikat tradisional.
+                    {{ $t('about.location.content') }}
                   </p>
                 </div>
               </div>
@@ -74,18 +71,18 @@
           <div class="grid grid-cols-2 gap-4">
             <div class="space-y-4">
               <div class="bg-gradient-to-br from-amber-200 to-orange-300 rounded-2xl h-48 flex items-center justify-center shadow-lg">
-                <span class="text-gray-700 font-medium">Proses Tenun</span>
+                <span class="text-gray-700 font-medium">{{ $t('about.gallery.process') }}</span>
               </div>
               <div class="bg-gradient-to-br from-orange-200 to-red-300 rounded-2xl h-32 flex items-center justify-center shadow-lg">
-                <span class="text-gray-700 font-medium">Motif Tradisional</span>
+                <span class="text-gray-700 font-medium">{{ $t('about.gallery.motifs') }}</span>
               </div>
             </div>
             <div class="space-y-4 mt-8">
               <div class="bg-gradient-to-br from-red-200 to-pink-300 rounded-2xl h-32 flex items-center justify-center shadow-lg">
-                <span class="text-gray-700 font-medium">Produk Jadi</span>
+                <span class="text-gray-700 font-medium">{{ $t('about.gallery.products') }}</span>
               </div>
               <div class="bg-gradient-to-br from-pink-200 to-purple-300 rounded-2xl h-48 flex items-center justify-center shadow-lg">
-                <span class="text-gray-700 font-medium">Workshop</span>
+                <span class="text-gray-700 font-medium">{{ $t('about.gallery.workshop') }}</span>
               </div>
             </div>
           </div>
@@ -96,24 +93,34 @@
       <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
         <div class="text-center">
           <div class="text-4xl font-bold text-amber-600 mb-2">35+</div>
-          <p class="text-gray-600 font-medium">Tahun Pengalaman</p>
+          <p class="text-gray-600 font-medium">{{ $t('about.stats.experience') }}</p>
         </div>
         <div class="text-center">
           <div class="text-4xl font-bold text-orange-600 mb-2">60</div>
-          <p class="text-gray-600 font-medium">Tenaga Kerja</p>
+          <p class="text-gray-600 font-medium">{{ $t('about.stats.workers') }}</p>
         </div>
         <div class="text-center">
           <div class="text-4xl font-bold text-red-600 mb-2">100M+</div>
-          <p class="text-gray-600 font-medium">Omset Bulanan</p>
+          <p class="text-gray-600 font-medium">{{ $t('about.stats.revenue') }}</p>
         </div>
         <div class="text-center">
           <div class="text-4xl font-bold text-pink-600 mb-2">10+</div>
-          <p class="text-gray-600 font-medium">Daerah Pemasaran</p>
+          <p class="text-gray-600 font-medium">{{ $t('about.stats.regions') }}</p>
         </div>
       </div>
   </BaseSection>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import BaseSection from '@/components/ui/BaseSection.vue'
+
+const { t } = useI18n()
+
+const aboutTitle = computed(() => {
+  return t('about.title', { 
+    highlight: `<span class="text-amber-600">${t('about.titleHighlight')}</span>` 
+  })
+})
 </script>

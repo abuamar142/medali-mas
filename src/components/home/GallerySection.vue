@@ -1,8 +1,8 @@
 <template>
   <BaseSection
     id="gallery"
-    title='Galeri <span class="text-amber-600">Produk</span>'
-    subtitle="Koleksi foto produk tenun ikat berkualitas tinggi dari Medali Mas"
+    :title="galleryTitle"
+    :subtitle="$t('gallery.subtitle')"
     background="gradient"
     padding="xl"
   >
@@ -32,9 +32,9 @@
     <!-- Process Gallery -->
     <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
       <div class="text-center mb-12">
-        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Proses Pembuatan</h3>
+        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">{{ $t('gallery.process.title') }}</h3>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Dari benang hingga menjadi kain tenun ikat yang indah
+          {{ $t('gallery.process.subtitle') }}
         </p>
       </div>
 
@@ -55,9 +55,9 @@
     <template #footer>
       <!-- CTA Section -->
       <div class="text-center bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
-        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">Ingin Melihat Produk Secara Langsung?</h3>
+        <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">{{ $t('gallery.cta.title') }}</h3>
         <p class="text-base sm:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Kunjungi workshop kami di Kediri atau hubungi untuk konsultasi produk
+          {{ $t('gallery.cta.description') }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <BaseButton
@@ -69,7 +69,7 @@
             class="shadow-lg hover:shadow-xl"
           >
             <MapPin class="w-5 h-5 mr-2" />
-            Kunjungi Workshop
+            {{ $t('gallery.cta.visit') }}
           </BaseButton>
           <BaseButton
             variant="outline"
@@ -80,7 +80,7 @@
             target="_blank"
           >
             <Instagram class="w-5 h-5 mr-2" />
-            Follow Instagram
+            {{ $t('gallery.cta.follow') }}
           </BaseButton>
         </div>
       </div>
@@ -109,11 +109,11 @@
     
     <template #footer>
       <BaseButton variant="secondary" @click="closeImageModal">
-        Tutup
+        {{ $t('gallery.modal.close') }}
       </BaseButton>
       <BaseButton variant="primary" @click="shareImage">
         <Share2 class="w-4 h-4 mr-2" />
-        Bagikan
+        {{ $t('gallery.modal.share') }}
       </BaseButton>
     </template>
   </BaseModal>
@@ -121,18 +121,28 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useTranslatedData } from '@/composables/useTranslatedData'
 import BaseSection from '../ui/BaseSection.vue'
 import BaseButton from '../ui/BaseButton.vue'
 import BaseModal from '../ui/BaseModal.vue'
 import GalleryFilter from '../gallery/GalleryFilter.vue'
 import GalleryItem from '../gallery/GalleryItem.vue'
-import { categories, galleryItems, processSteps } from '@/data'
+import { galleryItems } from '@/data'
 import type { GalleryItem as GalleryItemType } from '@/types'
 import { MapPin, Instagram, Share2 } from '@/components/icons'
 
+const { t } = useI18n()
+const { categories, processSteps } = useTranslatedData()
 const activeCategory = ref('all')
 const isModalOpen = ref(false)
 const selectedImage = ref<GalleryItemType | null>(null)
+
+const galleryTitle = computed(() => {
+  return t('gallery.title', { 
+    highlight: `<span class="text-amber-600">${t('gallery.titleHighlight')}</span>` 
+  })
+})
 
 const filteredGallery = computed(() => {
   if (activeCategory.value === 'all') {
@@ -152,7 +162,7 @@ const closeImageModal = () => {
 }
 
 const getCategoryName = (categoryId: string) => {
-  const category = categories.find(cat => cat.id === categoryId)
+  const category = categories.value.find(cat => cat.id === categoryId)
   return category?.name || categoryId
 }
 

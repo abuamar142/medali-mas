@@ -15,37 +15,37 @@
             </div>
           </div>
           <p class="text-gray-300 leading-relaxed">
-            Melestarikan warisan budaya tenun ikat tradisional Kediri sejak 1989 dengan kualitas terbaik dan inovasi berkelanjutan.
+            {{ $t('footer.description') }}
           </p>
         </div>
 
         <!-- Quick Links -->
         <div class="space-y-6">
-          <h4 class="text-lg font-semibold text-amber-300">Menu Utama</h4>
+          <h4 class="text-lg font-semibold text-amber-300">{{ $t('footer.quickLinks') }}</h4>
           <nav class="space-y-3">
-            <a href="#hero" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">Beranda</a>
-            <a href="#about" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">Tentang Kami</a>
-            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">Produk</a>
-            <a href="#gallery" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">Galeri</a>
+            <a href="#hero" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.home') }}</a>
+            <a href="#about" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.about') }}</a>
+            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.products') }}</a>
+            <a href="#gallery" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.gallery') }}</a>
             <a href="#achievements" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">Prestasi</a>
-            <a href="#contact" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">Kontak</a>
+            <a href="#contact" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('nav.contact') }}</a>
           </nav>
         </div>
 
         <!-- Products -->
         <div class="space-y-6">
-          <h4 class="text-lg font-semibold text-amber-300">Produk Kami</h4>
+          <h4 class="text-lg font-semibold text-amber-300">{{ $t('products.title') }}</h4>
           <nav class="space-y-3">
-            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">Kain Tenun Ikat</a>
-            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">Fashion & Aksesoris</a>
-            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">Dekorasi Rumah</a>
-            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">Produk Kemitraan</a>
+            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('gallery.categories.fabric') }}</a>
+            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('gallery.categories.fashion') }}</a>
+            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('gallery.categories.home') }}</a>
+            <a href="#products" class="block text-gray-300 hover:text-amber-300 transition-colors duration-300">{{ $t('gallery.categories.partnership') }}</a>
           </nav>
         </div>
 
         <!-- Contact Info -->
         <div class="space-y-6">
-          <h4 class="text-lg font-semibold text-amber-300">Kontak & Lokasi</h4>
+          <h4 class="text-lg font-semibold text-amber-300">{{ $t('footer.contact') }}</h4>
           <div class="space-y-4">
             <div class="flex items-start space-x-3">
               <svg class="w-5 h-5 text-amber-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,7 +82,7 @@
       <div class="container mx-auto px-4 lg:px-8 py-6">
         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div class="text-gray-400 text-sm">
-            © {{ currentYear }} UD. Medali Mas. Seluruh hak cipta dilindungi.
+            {{ $t('footer.copyright') }}
           </div>
           <div class="flex items-center space-x-6 text-sm text-gray-400">
             <span>UKM Unggulan Kota Kediri</span>
@@ -105,7 +105,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const currentYear = computed(() => new Date().getFullYear());
+const { t } = useI18n()
+const currentYear = computed(() => new Date().getFullYear())
 </script>

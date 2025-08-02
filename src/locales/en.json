@@ -1,0 +1,295 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "gallery": "Gallery",
+    "achievements": "Achievements",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Tenun Ikat Medali Mas",
+    "subtitle": "Kediri Cultural Heritage Since 1989",
+    "description": "Preserving the beauty of traditional tenun ikat with modern touches. High-quality products from the skilled hands of Kediri craftsmen.",
+    "cta": {
+      "products": "View Our Products",
+      "contact": "Contact Us"
+    },
+    "features": {
+      "experience": {
+        "title": "Since 1989",
+        "description": "More than 35 years of experience"
+      },
+      "quality": {
+        "title": "Quality Assured",
+        "description": "High-quality products"
+      },
+      "workers": {
+        "title": "60 Workers",
+        "description": "Experienced craftsman team"
+      }
+    }
+  },
+  "about": {
+    "title": "About {highlight}",
+    "titleHighlight": "Medali Mas",
+    "subtitle": "A long journey in preserving Kediri's tenun ikat cultural heritage",
+    "story": {
+      "title": "Brief History",
+      "content": "Founded by Mr. Munawar on February 27, 1989, UD. Medali Mas has grown from a home business to become one of Kediri City's leading SMEs in the field of tenun ikat."
+    },
+    "vision": {
+      "title": "Vision & Mission",
+      "content": "To preserve and develop traditional tenun ikat art with modern innovation, creating high-quality products that make Indonesian culture proud."
+    },
+    "location": {
+      "title": "Location",
+      "content": "Located at Jl. KH. Agus Salim Gg. VIII, No. 54 C, Bandar Kidul Village, Mojoroto District, Kediri City - the center of traditional tenun ikat."
+    },
+    "gallery": {
+      "process": "Tenun Process",
+      "motifs": "Traditional Motifs",
+      "products": "Finished Products",
+      "workshop": "Workshop"
+    },
+    "stats": {
+      "experience": "Years of Experience",
+      "workers": "Workforce",
+      "revenue": "Monthly Revenue",
+      "regions": "Marketing Regions"
+    }
+  },
+  "products": {
+    "title": "{highlight} Products",
+    "titleHighlight": "Featured",
+    "subtitle": "Various high-quality tenun ikat products with traditional and modern designs",
+    "categories": {
+      "fabric": {
+        "title": "Tenun Ikat Fabric",
+        "description": "High-quality fabric with traditional motifs",
+        "items": [
+          "Misris Type (Rp 125,000 - Rp 195,000)",
+          "Semi Silk (Rp 300,000)",
+          "Imported Silk Fabric"
+        ]
+      },
+      "fashion": {
+        "title": "Fashion & Accessories",
+        "description": "Fashion products with tenun ikat touch",
+        "items": ["Tenun Shawl", "Tenun Sarong", "Souvenir Bags"]
+      },
+      "home": {
+        "title": "Home Decoration",
+        "description": "Home decoration with traditional nuances",
+        "items": ["Tissue Cover Cloth", "Water Gallon Cover Cloth", "Glass Cover Cloth"]
+      }
+    },
+    "partnership": {
+      "title": "Partnership Products",
+      "subtitle": "Collaborating with other SMEs to present innovative products made from tenun ikat",
+      "items": [
+        {
+          "name": "SME Den Yu",
+          "description": "Shoes & Sandals with tenun ikat motifs"
+        },
+        {
+          "name": "SME Gakris",
+          "description": "Bags made from tenun fabric"
+        },
+        {
+          "name": "UD Sinar Sejati",
+          "description": "Household decoration products"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Interested in Our Products?",
+      "description": "Contact us for more information about products and current prices",
+      "contact": "Contact Us",
+      "gallery": "View Gallery"
+    }
+  },
+  "achievements": {
+    "title": "Achievements & {highlight}",
+    "titleHighlight": "Awards",
+    "subtitle": "Accomplishments and recognition for dedication in preserving tenun ikat culture",
+    "mainAchievements": [
+      {
+        "title": "Upakarti 2010",
+        "description": "Received the Upakarti Award in the Pioneering category 2010 for contributions in developing the tenun ikat industry in Kediri.",
+        "category": "Category: Pioneering"
+      },
+      {
+        "title": "UKM Award 2008",
+        "description": "Won the UKM Award Parasanya Kerta Nugraha 2008 as recognition for product quality and innovation.",
+        "category": "Parasanya Kerta Nugraha"
+      }
+    ],
+    "additionalAchievements": [
+      {
+        "title": "Instructor Certificate",
+        "issuer": "Dinsosnakertrans 2011",
+        "description": "Appointed as a tenun development training instructor in the guidance of people with social welfare problems."
+      },
+      {
+        "title": "Pro Poor Award Nomination",
+        "issuer": "Governor of East Java 2012",
+        "description": "Best nomination in the individual category of poverty alleviation work competition from the Governor of East Java."
+      }
+    ],
+    "statistics": {
+      "title": "Business Achievements",
+      "subtitle": "Significant growth and development in the tenun ikat industry",
+      "items": [
+        {
+          "value": "100M+",
+          "label": "Monthly Revenue",
+          "unit": "Rupiah"
+        },
+        {
+          "value": "60",
+          "label": "Workforce",
+          "unit": "People"
+        },
+        {
+          "value": "10+",
+          "label": "Marketing Areas",
+          "unit": "Regions"
+        },
+        {
+          "value": "35+",
+          "label": "Years of Work",
+          "unit": "Since 1989"
+        }
+      ]
+    },
+    "recognition": {
+      "title": "Quality Recognized",
+      "items": [
+        {
+          "title": "Government Agencies",
+          "description": "Trusted for office and institutional uniforms"
+        },
+        {
+          "title": "General Public",
+          "description": "Popular among various circles"
+        },
+        {
+          "title": "Archipelago Export",
+          "description": "Distributed throughout Java and beyond"
+        }
+      ]
+    }
+  },
+  "gallery": {
+    "title": "{highlight} Gallery",
+    "titleHighlight": "Product",
+    "subtitle": "Collection of high-quality tenun ikat product photos from Medali Mas",
+    "process": {
+      "title": "Manufacturing Process",
+      "subtitle": "From thread to beautiful tenun ikat fabric",
+      "steps": {
+        "preparation": {
+          "title": "Thread Preparation",
+          "description": "Selection and preparation of high-quality threads with the best standards"
+        },
+        "dyeing": {
+          "title": "Tie & Dye",
+          "description": "Tying and dyeing process using traditional techniques that have been passed down"
+        },
+        "weaving": {
+          "title": "Tenun",
+          "description": "Tenun process using non-machine looms (ATBM) by experienced craftsmen"
+        },
+        "finishing": {
+          "title": "Finishing",
+          "description": "Final finishing and quality control to ensure the best product quality"
+        }
+      }
+    },
+    "cta": {
+      "title": "Want to See Products in Person?",
+      "description": "Visit our workshop in Kediri or contact us for product consultation",
+      "visit": "Visit Workshop",
+      "follow": "Follow Instagram"
+    },
+    "modal": {
+      "close": "Close",
+      "share": "Share"
+    },
+    "categories": {
+      "all": "All Products",
+      "fabric": "Tenun Fabric",
+      "fashion": "Fashion",
+      "home": "Home Decoration",
+      "partnership": "Partnership Products"
+    }
+  },
+  "contact": {
+    "title": "Contact {highlight}",
+    "titleHighlight": "Us",
+    "subtitle": "Interested in our tenun ikat products? Don't hesitate to contact us",
+    "businessInfo": {
+      "title": "Business Information",
+      "name": "Business Name",
+      "owner": "Owner",
+      "foundedDate": "Established Since"
+    },
+    "contactDetails": {
+      "title": "Contact & Location",
+      "address": "Address",
+      "phone": "Phone",
+      "instagram": "Instagram"
+    },
+    "location": {
+      "title": "Workshop Location",
+      "mainWorkshop": "Main Workshop",
+      "secondLocation": "Second Location",
+      "openInMaps": "Open in Google Maps"
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Operating Hours"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "social": {
+      "title": "Follow Us",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "description": "Preserving the beauty of traditional tenun ikat with modern touches since 1989.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "copyright": "© 2024 UD. Medali Mas. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try Again",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "more": "More",
+    "less": "Less"
+  }
+}

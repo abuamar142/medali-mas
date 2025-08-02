@@ -18,30 +18,29 @@
 
         <!-- Main Title -->
         <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          <span class="block">Tenun Ikat</span>
+          <span class="block">{{ $t('hero.title').split(' ').slice(0, 2).join(' ') }}</span>
           <span class="block bg-gradient-to-r from-amber-300 to-orange-400 bg-clip-text text-transparent">
-            Medali Mas
+            {{ $t('hero.title').split(' ').slice(2).join(' ') }}
           </span>
         </h1>
 
         <!-- Subtitle -->
         <p class="text-xl md:text-2xl text-amber-100 mb-8 leading-relaxed">
-          Warisan Budaya Kediri Sejak 1989
+          {{ $t('hero.subtitle') }}
         </p>
 
         <!-- Description -->
         <p class="text-lg text-amber-50/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Melestarikan keindahan tenun ikat tradisional dengan sentuhan modern. 
-          Produk berkualitas tinggi dari tangan-tangan terampil pengrajin Kediri.
+          {{ $t('hero.description') }}
         </p>
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="#products" class="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            Lihat Produk Kami
+            {{ $t('hero.cta.products') }}
           </a>
           <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-orange-800 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300">
-            Hubungi Kami
+            {{ $t('hero.cta.contact') }}
           </a>
         </div>
 
@@ -53,8 +52,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <h3 class="text-white font-semibold text-lg mb-2">Sejak 1989</h3>
-            <p class="text-amber-100/80">Pengalaman lebih dari 35 tahun</p>
+            <h3 class="text-white font-semibold text-lg mb-2">{{ $t('hero.features.experience.title') }}</h3>
+            <p class="text-amber-100/80">{{ $t('hero.features.experience.description') }}</p>
           </div>
           
           <div class="text-center">
@@ -63,8 +62,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <h3 class="text-white font-semibold text-lg mb-2">Kualitas Terjamin</h3>
-            <p class="text-amber-100/80">Produk berkualitas tinggi</p>
+            <h3 class="text-white font-semibold text-lg mb-2">{{ $t('hero.features.quality.title') }}</h3>
+            <p class="text-amber-100/80">{{ $t('hero.features.quality.description') }}</p>
           </div>
           
           <div class="text-center">
@@ -73,8 +72,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
               </svg>
             </div>
-            <h3 class="text-white font-semibold text-lg mb-2">60 Pekerja</h3>
-            <p class="text-amber-100/80">Tim pengrajin berpengalaman</p>
+            <h3 class="text-white font-semibold text-lg mb-2">{{ $t('hero.features.workers.title') }}</h3>
+            <p class="text-amber-100/80">{{ $t('hero.features.workers.description') }}</p>
           </div>
         </div>
       </div>

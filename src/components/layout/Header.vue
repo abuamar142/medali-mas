@@ -26,8 +26,9 @@
               'after:transition-all after:duration-300 hover:after:w-full'
             ]"
           >
-            {{ item.name }}
+            {{ $t(`nav.${item.id}`) }}
           </a>
+          <LanguageSwitcher />
           <BaseButton
             variant="primary"
             size="sm"
@@ -37,22 +38,25 @@
             class="shadow-md hover:shadow-lg"
           >
             <Mail class="w-4 h-4 mr-2" />
-            Kontak
+            {{ $t('nav.contact') }}
           </BaseButton>
         </nav>
 
         <!-- Mobile Menu Button -->
-        <BaseButton
-          variant="ghost"
-          size="sm"
-          class="lg:hidden p-2"
-          @click="toggleMobileMenu"
-        >
-          <Transition name="fade" mode="out-in">
-            <Menu v-if="!isMobileMenuOpen" class="w-6 h-6" />
-            <X v-else class="w-6 h-6" />
-          </Transition>
-        </BaseButton>
+        <div class="lg:hidden flex items-center space-x-2">
+          <LanguageSwitcher />
+          <BaseButton
+            variant="ghost"
+            size="sm"
+            class="p-2"
+            @click="toggleMobileMenu"
+          >
+            <Transition name="fade" mode="out-in">
+              <Menu v-if="!isMobileMenuOpen" class="w-6 h-6" />
+              <X v-else class="w-6 h-6" />
+            </Transition>
+          </BaseButton>
+        </div>
       </div>
 
       <!-- Mobile Navigation -->
@@ -74,12 +78,12 @@
               @click="closeMobileMenu"
             >
               <div class="flex items-center space-x-3">
-                <Home v-if="item.id === 'hero'" class="w-5 h-5" />
+                <Home v-if="item.id === 'home'" class="w-5 h-5" />
                 <User v-else-if="item.id === 'about'" class="w-5 h-5" />
                 <Package v-else-if="item.id === 'products'" class="w-5 h-5" />
                 <Image v-else-if="item.id === 'gallery'" class="w-5 h-5" />
                 <Award v-else class="w-5 h-5" />
-                <span>{{ item.name }}</span>
+                <span>{{ $t(`nav.${item.id}`) }}</span>
               </div>
             </a>
             <div class="pt-4 border-t border-gray-200/50 mt-4">
@@ -92,7 +96,7 @@
                 @click="closeMobileMenu"
               >
                 <Mail class="w-4 h-4 mr-2" />
-                Hubungi Kami
+                {{ $t('nav.contact') }}
               </BaseButton>
             </div>
           </nav>
@@ -105,16 +109,17 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import BaseButton from '../ui/BaseButton.vue'
+import LanguageSwitcher from '../ui/LanguageSwitcher.vue'
 import { Menu, X, Mail, Home, User, Package, Image, Award } from '@/components/icons'
 
 const isMobileMenuOpen = ref(false)
 
 const navigationItems = [
-  { id: 'hero', name: 'Beranda', href: '#hero' },
-  { id: 'about', name: 'Tentang', href: '#about' },
-  { id: 'products', name: 'Produk', href: '#products' },
-  { id: 'gallery', name: 'Galeri', href: '#gallery' },
-  { id: 'achievements', name: 'Prestasi', href: '#achievements' }
+  { id: 'home', href: '#hero' },
+  { id: 'about', href: '#about' },
+  { id: 'products', href: '#products' },
+  { id: 'gallery', href: '#gallery' },
+  { id: 'achievements', href: '#achievements' }
 ]
 
 const toggleMobileMenu = () => {
