@@ -1,17 +1,13 @@
 <template>
-  <section id="products" class="py-20 bg-white">
-    <div class="container mx-auto px-4 lg:px-8">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-          Produk <span class="text-amber-600">Unggulan</span>
-        </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Beragam produk tenun ikat berkualitas tinggi dengan desain tradisional dan modern
-        </p>
-      </div>
-
-      <!-- Product Categories -->
+  <BaseSection
+    id="products"
+    title='Produk <span class="text-amber-600">Unggulan</span>'
+    subtitle="Beragam produk tenun ikat berkualitas tinggi dengan desain tradisional dan modern"
+    background="white"
+    padding="xl"
+    header-spacing="xl"
+  >
+    <!-- Product Categories -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <!-- Kain Tenun -->
         <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
@@ -156,10 +152,9 @@
           </a>
         </div>
       </div>
-    </div>
-  </section>
+  </BaseSection>
 </template>
 
 <script setup lang="ts">
-// Component logic here if needed
+import BaseSection from '@/components/ui/BaseSection.vue'
 </script>

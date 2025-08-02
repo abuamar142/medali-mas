@@ -1,20 +1,28 @@
 <template>
-  <section id="achievements" class="py-20 bg-gradient-to-br from-amber-900 via-orange-800 to-red-900 relative overflow-hidden">
+  <BaseSection
+    id="achievements"
+    background="transparent"
+    padding="xl"
+    header-spacing="xl"
+    class="bg-gradient-to-br from-amber-900 via-orange-800 to-red-900 relative overflow-hidden"
+  >
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
       <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
     </div>
 
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+    <template #header>
+      <div class="text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
           Prestasi & <span class="text-amber-300">Penghargaan</span>
         </h2>
-        <p class="text-xl text-amber-100 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-lg sm:text-xl text-amber-100 leading-relaxed max-w-3xl mx-auto">
           Pencapaian dan pengakuan atas dedikasi dalam melestarikan budaya tenun ikat
         </p>
       </div>
+    </template>
+
+    <div class="relative z-10">
 
       <!-- Main Achievements -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -163,9 +171,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </BaseSection>
 </template>
 
 <script setup lang="ts">
-// Component logic here if needed
+import BaseSection from '@/components/ui/BaseSection.vue'
 </script>

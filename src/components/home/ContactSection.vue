@@ -1,17 +1,13 @@
 <template>
-  <section id="contact" class="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
-    <div class="container mx-auto px-4 lg:px-8">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-          Hubungi <span class="text-amber-600">Kami</span>
-        </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Tertarik dengan produk tenun ikat kami? Jangan ragu untuk menghubungi kami
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:items-start">
+  <BaseSection
+    id="contact"
+    title='Hubungi <span class="text-amber-600">Kami</span>'
+    subtitle="Tertarik dengan produk tenun ikat kami? Jangan ragu untuk menghubungi kami"
+    background="amber"
+    padding="xl"
+    header-spacing="xl"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:items-start">
         <!-- Contact Information -->
         <div class="space-y-8 h-full flex flex-col">
           <!-- Business Info -->
@@ -205,14 +201,14 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+  </BaseSection>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { businessInfo } from '@/data'
 import { Building, User, Calendar, MapPin, Phone, Instagram, ExternalLink } from '@/components/icons'
+import BaseSection from '@/components/ui/BaseSection.vue'
 
 const activeMapTab = ref('main')
 const mapsLoaded = ref(false)

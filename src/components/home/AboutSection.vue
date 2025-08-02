@@ -1,17 +1,13 @@
 <template>
-  <section id="about" class="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
-    <div class="container mx-auto px-4 lg:px-8">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-          Tentang <span class="text-amber-600">Medali Mas</span>
-        </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Perjalanan panjang dalam melestarikan warisan budaya tenun ikat Kediri
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <BaseSection
+    id="about"
+    title='Tentang <span class="text-amber-600">Medali Mas</span>'
+    subtitle="Perjalanan panjang dalam melestarikan warisan budaya tenun ikat Kediri"
+    background="amber"
+    padding="xl"
+    header-spacing="xl"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Story Content -->
         <div class="order-2 lg:order-1">
           <div class="space-y-6">
@@ -115,10 +111,9 @@
           <p class="text-gray-600 font-medium">Daerah Pemasaran</p>
         </div>
       </div>
-    </div>
-  </section>
+  </BaseSection>
 </template>
 
 <script setup lang="ts">
-// Component logic here if needed
+import BaseSection from '@/components/ui/BaseSection.vue'
 </script>
