@@ -68,10 +68,7 @@
             href="#contact"
             class="shadow-lg hover:shadow-xl"
           >
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
+            <MapPin class="w-5 h-5 mr-2" />
             Kunjungi Workshop
           </BaseButton>
           <BaseButton
@@ -82,9 +79,7 @@
             href="https://www.instagram.com/tenunmedalimasofficial"
             target="_blank"
           >
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m8 6V8a2 2 0 00-2-2H6a2 2 0 00-2 2v6"></path>
-            </svg>
+            <Instagram class="w-5 h-5 mr-2" />
             Follow Instagram
           </BaseButton>
         </div>
@@ -117,9 +112,7 @@
         Tutup
       </BaseButton>
       <BaseButton variant="primary" @click="shareImage">
-        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
-        </svg>
+        <Share2 class="w-4 h-4 mr-2" />
         Bagikan
       </BaseButton>
     </template>
@@ -135,6 +128,7 @@ import GalleryFilter from '../gallery/GalleryFilter.vue'
 import GalleryItem from '../gallery/GalleryItem.vue'
 import { categories, galleryItems, processSteps } from '@/data'
 import type { GalleryItem as GalleryItemType } from '@/types'
+import { MapPin, Instagram, Share2 } from '@/components/icons'
 
 const activeCategory = ref('all')
 const isModalOpen = ref(false)
