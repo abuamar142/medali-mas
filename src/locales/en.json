@@ -215,6 +215,7 @@
     },
     "modal": {
       "close": "Close",
+      "viewDetail": "View Detail",
       "share": "Share",
       "copied": "Copied!"
     },
@@ -286,6 +287,7 @@
   "product": {
     "contact": "Contact for Info",
     "share": "Share Product",
+    "copied": "Link Copied!",
     "backToGallery": "Back to Gallery",
     "related": "Related Products"
   },

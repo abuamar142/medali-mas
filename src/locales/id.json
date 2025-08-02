@@ -215,6 +215,7 @@
     },
     "modal": {
       "close": "Tutup",
+      "viewDetail": "Lihat Detail",
       "share": "Bagikan",
       "copied": "Tersalin!"
     },
@@ -275,6 +276,7 @@
   "product": {
     "contact": "Hubungi untuk Info",
     "share": "Bagikan Produk",
+    "copied": "Link Tersalin!",
     "backToGallery": "Kembali ke Galeri",
     "related": "Produk Terkait"
   },

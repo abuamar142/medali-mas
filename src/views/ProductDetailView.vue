@@ -116,8 +116,15 @@
                 class="flex-1"
                 @click="shareProduct"
               >
-                <Share2 class="w-5 h-5 mr-2" />
-                {{ $t('product.share') }}
+                <Share2 
+                  v-if="!isShared"
+                  class="w-5 h-5 mr-2" 
+                />
+                <Check
+                  v-else
+                  class="w-5 h-5 mr-2"
+                />
+                {{ isShared ? $t('product.copied') : $t('product.share') }}
               </BaseButton>
             </div>
 
@@ -169,7 +176,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
 import GalleryItem from '@/components/gallery/GalleryItem.vue'
 import { galleryItems, businessInfo } from '@/data'
 import type { GalleryItem as GalleryItemType } from '@/types'
-import { Image, MessageCircle, Share2, ArrowLeft } from '@/components/icons'
+import { Image, MessageCircle, Share2, ArrowLeft, Check } from '@/components/icons'
 
 const route = useRoute()
 const router = useRouter()
@@ -177,6 +184,7 @@ const { categories } = useTranslatedData()
 const { setProductSEO } = useSEO()
 
 const imageError = ref(false)
+const isShared = ref(false)
 
 // Find product by ID
 const product = computed(() => {
@@ -214,21 +222,18 @@ const contactForProduct = () => {
 
 const shareProduct = () => {
   const url = window.location.href
-  const title = product.value?.title || ''
-  const text = product.value?.description || ''
-
-  if (navigator.share) {
-    navigator.share({
-      title: `${title} - Tenun Medali Mas`,
-      text: text,
-      url: url
-    })
-  } else {
-    // Fallback: copy to clipboard
-    navigator.clipboard.writeText(url).then(() => {
-      alert('Link produk telah disalin ke clipboard!')
-    })
-  }
+  
+  // Always copy to clipboard
+  navigator.clipboard.writeText(url).then(() => {
+    isShared.value = true
+    // Reset after 3 seconds
+    setTimeout(() => {
+      isShared.value = false
+    }, 3000)
+  }).catch(() => {
+    // Fallback if clipboard API fails
+    alert('Tidak dapat menyalin link. Silakan salin URL dari address bar.')
+  })
 }
 
 const goToProduct = (item: GalleryItemType) => {

@@ -69,30 +69,14 @@
           </h3>
         </div>
       </div>
-
-      <!-- Centered button - appears on hover -->
-      <div class="absolute inset-0 flex items-center justify-center z-20">
-        <div class="opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform scale-75 group-hover:scale-100">
-          <BaseButton
-            variant="primary"
-            size="md"
-            rounded
-            @click.stop="$emit('preview', item)"
-          >
-            <Eye class="w-5 h-5 mr-2" />
-            Preview
-          </BaseButton>
-        </div>
-      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import BaseButton from '@/components/ui/BaseButton.vue'
 import type { GalleryItem, Category } from '@/types'
-import { Image, Eye } from '@/components/icons'
+import { Image } from '@/components/icons'
 
 interface Props {
   item: GalleryItem
@@ -101,6 +85,10 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+
+const emit = defineEmits<{
+  preview: [item: GalleryItem]
+}>()
 
 const imageError = ref(false)
 const imageLoaded = ref(false)
@@ -119,7 +107,7 @@ const cardClasses = computed(() => {
 })
 
 const handleClick = () => {
-  window.location.href = `/product/${props.item.id}`
+  emit('preview', props.item)
 }
 
 const handleImageError = () => {
