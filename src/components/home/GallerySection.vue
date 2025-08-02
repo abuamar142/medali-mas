@@ -155,17 +155,17 @@ const categories = [
 
 const galleryItems: GalleryItemType[] = [
   { title: 'Kain Tenun Misris', description: 'Kain tenun berkualitas tinggi', category: 'fabric', image: 'https://i.imgur.com/2gMWgmc.jpeg' },
-  { title: 'Semi Sutra Premium', description: 'Kain sutra dengan motif elegan', category: 'fabric', image: 'https://images.unsplash.com/photo-1594736797933-d0d99b051677?w=400&h=600&fit=crop' },
-  { title: 'Shal Tenun Elegant', description: 'Shal dengan sentuhan modern', category: 'fashion', image: 'https://images.unsplash.com/photo-1583743814966-8936f37f86df?w=400&h=600&fit=crop' },
-  { title: 'Sarung Tenun Tradisional', description: 'Sarung dengan motif klasik', category: 'fashion', image: 'https://images.unsplash.com/photo-1564584217132-2271339881b4?w=400&h=600&fit=crop' },
-  { title: 'Tas Souvenir Unik', description: 'Tas dengan desain khas Kediri', category: 'fashion', image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=600&fit=crop' },
-  { title: 'Penutup Tisu Cantik', description: 'Dekorasi rumah yang fungsional', category: 'home', image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=600&fit=crop' },
-  { title: 'Penutup Galon Stylish', description: 'Pelindung galon yang estetik', category: 'home', image: 'https://images.unsplash.com/photo-1615800001952-9c36f4447cc0?w=400&h=600&fit=crop' },
-  { title: 'Sepatu Tenun Ikat', description: 'Kolaborasi dengan UKM Den Yu', category: 'partnership', image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=600&fit=crop' },
-  { title: 'Tas Premium Gakris', description: 'Kolaborasi dengan UKM Gakris', category: 'partnership', image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400&h=600&fit=crop' },
-  { title: 'Motif Tradisional', description: 'Ragam motif khas Kediri', category: 'fabric', image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop' },
-  { title: 'Proses Pewarnaan', description: 'Teknik pewarnaan tradisional', category: 'fabric', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=600&fit=crop' },
-  { title: 'Kain Sutra Import', description: 'Kain sutra berkualitas tinggi', category: 'fabric', image: 'https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&h=600&fit=crop' }
+  { title: 'Semi Sutra Premium', description: 'Kain sutra dengan motif elegan', category: 'fabric', image: 'https://picsum.photos/400/600?random=1' },
+  { title: 'Shal Tenun Elegant', description: 'Shal dengan sentuhan modern', category: 'fashion', image: 'https://picsum.photos/400/600?random=2' },
+  { title: 'Sarung Tenun Tradisional', description: 'Sarung dengan motif klasik', category: 'fashion', image: 'https://picsum.photos/400/600?random=3' },
+  { title: 'Tas Souvenir Unik', description: 'Tas dengan desain khas Kediri', category: 'fashion', image: 'https://picsum.photos/400/600?random=4' },
+  { title: 'Penutup Tisu Cantik', description: 'Dekorasi rumah yang fungsional', category: 'home', image: 'https://picsum.photos/400/600?random=5' },
+  { title: 'Penutup Galon Stylish', description: 'Pelindung galon yang estetik', category: 'home', image: 'https://picsum.photos/400/600?random=6' },
+  { title: 'Sepatu Tenun Ikat', description: 'Kolaborasi dengan UKM Den Yu', category: 'partnership', image: 'https://picsum.photos/400/600?random=7' },
+  { title: 'Tas Premium Gakris', description: 'Kolaborasi dengan UKM Gakris', category: 'partnership', image: 'https://picsum.photos/400/600?random=8' },
+  { title: 'Motif Tradisional', description: 'Ragam motif khas Kediri', category: 'fabric', image: 'https://picsum.photos/400/600?random=9' },
+  { title: 'Proses Pewarnaan', description: 'Teknik pewarnaan tradisional', category: 'fabric', image: 'https://picsum.photos/400/600?random=10' },
+  { title: 'Kain Sutra Import', description: 'Kain sutra berkualitas tinggi', category: 'fabric', image: 'https://picsum.photos/400/600?random=11' }
 ]
 
 const processSteps = [

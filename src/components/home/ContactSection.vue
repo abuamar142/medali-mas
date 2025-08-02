@@ -230,8 +230,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Maps -->
     </div>
   </section>
 </template>
