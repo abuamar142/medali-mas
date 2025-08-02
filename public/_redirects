@@ -1,0 +1,5 @@
+# Redirect non-www to www for consistent branding
+https://medali-mas.abuamar.site/* https://www.medali-mas.abuamar.site/:splat 301!
+
+# SPA routing - redirect all routes to index.html
+/*    /index.html   200
