@@ -118,7 +118,7 @@ const cardClasses = computed(() => {
 })
 
 const handleClick = () => {
-  emit('click', props.item)
+  window.location.href = `/product/${props.item.id}`
 }
 
 const handleImageError = (event: Event) => {

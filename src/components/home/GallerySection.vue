@@ -112,8 +112,9 @@
         {{ $t('gallery.modal.close') }}
       </BaseButton>
       <BaseButton variant="primary" @click="shareImage">
-        <Share2 class="w-4 h-4 mr-2" />
-        {{ $t('gallery.modal.share') }}
+        <Share2 v-if="!isShared" class="w-4 h-4 mr-2" />
+        <Check v-else class="w-4 h-4 mr-2" />
+        {{ isShared ? $t('gallery.modal.copied') : $t('gallery.modal.share') }}
       </BaseButton>
     </template>
   </BaseModal>
@@ -130,13 +131,14 @@ import GalleryFilter from '../gallery/GalleryFilter.vue'
 import GalleryItem from '../gallery/GalleryItem.vue'
 import { galleryItems } from '@/data'
 import type { GalleryItem as GalleryItemType } from '@/types'
-import { MapPin, Instagram, Share2 } from '@/components/icons'
+import { MapPin, Instagram, Share2, Check } from '@/components/icons'
 
 const { t } = useI18n()
 const { categories, processSteps } = useTranslatedData()
 const activeCategory = ref('all')
 const isModalOpen = ref(false)
 const selectedImage = ref<GalleryItemType | null>(null)
+const isShared = ref(false)
 
 const galleryTitle = computed(() => {
   return t('gallery.title', { 
@@ -159,6 +161,7 @@ const openImageModal = (item: GalleryItemType) => {
 const closeImageModal = () => {
   isModalOpen.value = false
   selectedImage.value = null
+  isShared.value = false // Reset share state
 }
 
 const getCategoryName = (categoryId: string) => {
@@ -167,15 +170,25 @@ const getCategoryName = (categoryId: string) => {
 }
 
 const shareImage = () => {
-  if (selectedImage.value && navigator.share) {
-    navigator.share({
-      title: selectedImage.value.title,
-      text: selectedImage.value.description,
-      url: window.location.href
-    })
-  } else {
-    // Fallback: copy to clipboard
-    navigator.clipboard.writeText(window.location.href)
+  if (selectedImage.value) {
+    const productUrl = `${window.location.origin}/product/${selectedImage.value.id}`
+    
+    if (navigator.share) {
+      navigator.share({
+        title: `${selectedImage.value.title} - Tenun Medali Mas`,
+        text: selectedImage.value.description,
+        url: productUrl
+      })
+    } else {
+      // Fallback: copy to clipboard
+      navigator.clipboard.writeText(productUrl).then(() => {
+        isShared.value = true
+        // Reset after 3 seconds
+        setTimeout(() => {
+          isShared.value = false
+        }, 3000)
+      })
+    }
   }
 }
 </script>

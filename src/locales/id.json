@@ -215,7 +215,8 @@
     },
     "modal": {
       "close": "Tutup",
-      "share": "Bagikan"
+      "share": "Bagikan",
+      "copied": "Tersalin!"
     },
     "categories": {
       "all": "Semua Produk",
@@ -271,6 +272,12 @@
       "whatsapp": "WhatsApp"
     }
   },
+  "product": {
+    "contact": "Hubungi untuk Info",
+    "share": "Bagikan Produk",
+    "backToGallery": "Kembali ke Galeri",
+    "related": "Produk Terkait"
+  },
   "footer": {
     "description": "Melestarikan keindahan tenun ikat tradisional dengan sentuhan modern sejak 1989.",
     "quickLinks": "Tautan Cepat",
@@ -290,6 +297,7 @@
     "filter": "Filter",
     "sort": "Urutkan",
     "more": "Selengkapnya",
-    "less": "Lebih Sedikit"
+    "less": "Lebih Sedikit",
+    "home": "Beranda"
   }
 }

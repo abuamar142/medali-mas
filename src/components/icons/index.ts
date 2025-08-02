@@ -31,6 +31,7 @@ export {
   Scissors,
   Package,
   CheckCircle,
+  Check,
 
   // General UI
   Search,

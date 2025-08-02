@@ -215,7 +215,8 @@
     },
     "modal": {
       "close": "Close",
-      "share": "Share"
+      "share": "Share",
+      "copied": "Copied!"
     },
     "categories": {
       "all": "All Products",
@@ -278,6 +279,12 @@
     "followUs": "Follow Us",
     "copyright": "© 2024 UD. Medali Mas. All rights reserved."
   },
+  "product": {
+    "contact": "Contact for Info",
+    "share": "Share Product",
+    "backToGallery": "Back to Gallery",
+    "related": "Related Products"
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
@@ -290,6 +297,7 @@
     "filter": "Filter",
     "sort": "Sort",
     "more": "More",
-    "less": "Less"
+    "less": "Less",
+    "home": "Home"
   }
 }
