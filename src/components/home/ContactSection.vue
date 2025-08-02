@@ -28,7 +28,7 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-gray-800">Nama Usaha</h4>
-                  <p class="text-gray-600">UD. Medali Mas (Medali Emas)</p>
+                  <p class="text-gray-600">{{ businessInfo.name }}</p>
                 </div>
               </div>
 
@@ -41,7 +41,7 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-gray-800">Pemilik</h4>
-                  <p class="text-gray-600">Bapak Munawar</p>
+                  <p class="text-gray-600">{{ businessInfo.owner }}</p>
                 </div>
               </div>
 
@@ -54,7 +54,7 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-gray-800">Berdiri Sejak</h4>
-                  <p class="text-gray-600">27 Februari 1989</p>
+                  <p class="text-gray-600">{{ businessInfo.foundedDate }}</p>
                 </div>
               </div>
             </div>
@@ -75,10 +75,8 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-gray-800">Alamat</h4>
-                  <a href="https://maps.app.goo.gl/G2ybeAR28QuU1CD76" target="_blank" class="text-blue-600 hover:text-blue-700 transition-colors duration-300 leading-relaxed">
-                    Jl. KH. Agus Salim Gg. VIII, No. 54 C<br>
-                    Kelurahan Bandar Kidul, Kecamatan Mojoroto<br>
-                    Kota Kediri, Jawa Timur
+                  <a :href="businessInfo.addresses.main.mapUrl" target="_blank" class="text-blue-600 hover:text-blue-700 transition-colors duration-300 leading-relaxed">
+                    {{ businessInfo.addresses.main.address }}
                   </a>
                 </div>
               </div>
@@ -92,8 +90,8 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-gray-800">Telepon</h4>
-                  <a href="https://wa.me/6285736712477" target="_blank" class="text-green-600 hover:text-green-700 transition-colors duration-300">
-                    +62 857-3671-2477
+                  <a :href="`https://wa.me/${businessInfo.whatsapp}`" target="_blank" class="text-green-600 hover:text-green-700 transition-colors duration-300">
+                    {{ businessInfo.phone }}
                   </a>
                 </div>
               </div>
@@ -107,8 +105,8 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-gray-800">Instagram</h4>
-                  <a href="https://www.instagram.com/tenunmedalimasofficial" target="_blank" class="text-pink-600 hover:text-pink-700 transition-colors duration-300">
-                    @tenunmedalimasofficial
+                  <a :href="`https://www.instagram.com/${businessInfo.instagram}`" target="_blank" class="text-pink-600 hover:text-pink-700 transition-colors duration-300">
+                    @{{ businessInfo.instagram }}
                   </a>
                 </div>
               </div>
@@ -154,7 +152,7 @@
                 <!-- Main Workshop Map -->
                 <iframe 
                   v-if="activeMapTab === 'main'"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.6081548695656!2d111.99778907622941!3d-7.831229992189825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7857002c9076af%3A0x44d7c36146020b31!2sKerajinan%20Tenun%20Ikat%20Medali%20Mas!5e0!3m2!1sen!2sid!4v1754128473528!5m2!1sen!2sid"
+                  :src="businessInfo.addresses.main.embedUrl"
                   width="100%" 
                   height="100%" 
                   style="border:0;" 
@@ -167,7 +165,7 @@
                 <!-- Branch Location Map -->
                 <iframe 
                   v-if="activeMapTab === 'branch'"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.3708950686339!2d111.99936658219512!3d-7.8315862766091975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785767d7a10ca7%3A0x3c4a9ccf906bc239!2sTENUN%20IKAT%20ATBM%20MEDALI%20MAS%202!5e0!3m2!1sen!2sid!4v1754128528381!5m2!1sen!2sid"
+                  :src="businessInfo.addresses.branch.embedUrl"
                   width="100%" 
                   height="100%" 
                   style="border:0;" 
@@ -198,8 +196,8 @@
                 </div>
                 <div>
                   <h4 class="font-semibold text-amber-800">Workshop Utama</h4>
-                  <p class="text-sm text-amber-700">Jl. KH. Agus Salim Gg. VIII No.55B, Bandar Kidul, Kec. Mojoroto, Kota Kediri, Jawa Timur 64118</p>
-                  <a href="https://maps.app.goo.gl/PFBhRY6yppepX7wV8" target="_blank" class="inline-flex items-center mt-2 text-sm text-amber-600 hover:text-amber-700 font-medium">
+                  <p class="text-sm text-amber-700">{{ businessInfo.addresses.main.address }}</p>
+                  <a :href="businessInfo.addresses.main.mapUrl" target="_blank" class="inline-flex items-center mt-2 text-sm text-amber-600 hover:text-amber-700 font-medium">
                     Buka di Google Maps
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -217,8 +215,8 @@
                 </div>
                 <div>
                   <h4 class="font-semibold text-amber-800">Lokasi Kedua</h4>
-                  <p class="text-sm text-amber-700">Gg. IX No.51, Banjarmlati, Kec. Mojoroto, Kabupaten Kediri, Jawa Timur 64118</p>
-                  <a href="https://maps.app.goo.gl/krhPPoRnkYh9xNEC9" target="_blank" class="inline-flex items-center mt-2 text-sm text-amber-600 hover:text-amber-700 font-medium">
+                  <p class="text-sm text-amber-700">{{ businessInfo.addresses.branch.address }}</p>
+                  <a :href="businessInfo.addresses.branch.mapUrl" target="_blank" class="inline-flex items-center mt-2 text-sm text-amber-600 hover:text-amber-700 font-medium">
                     Buka di Google Maps
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -236,6 +234,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { businessInfo } from '@/data'
 
 const activeMapTab = ref('main')
 const mapsLoaded = ref(false)

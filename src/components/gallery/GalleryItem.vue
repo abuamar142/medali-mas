@@ -85,18 +85,12 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import BaseButton from '@/components/ui/BaseButton.vue'
-
-interface GalleryItem {
-  title: string
-  description: string
-  category: string
-  image?: string
-}
+import type { GalleryItem, Category } from '@/types'
 
 interface Props {
   item: GalleryItem
   index: number
-  categories: Array<{ id: string; name: string }>
+  categories: Category[]
 }
 
 const props = defineProps<Props>()

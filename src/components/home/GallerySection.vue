@@ -133,59 +133,12 @@ import BaseButton from '../ui/BaseButton.vue'
 import BaseModal from '../ui/BaseModal.vue'
 import GalleryFilter from '../gallery/GalleryFilter.vue'
 import GalleryItem from '../gallery/GalleryItem.vue'
-
-interface GalleryItemType {
-  title: string
-  description: string
-  category: string
-  image?: string
-}
+import { categories, galleryItems, processSteps } from '@/data'
+import type { GalleryItem as GalleryItemType } from '@/types'
 
 const activeCategory = ref('all')
 const isModalOpen = ref(false)
 const selectedImage = ref<GalleryItemType | null>(null)
-
-const categories = [
-  { id: 'all', name: 'Semua' },
-  { id: 'fabric', name: 'Kain Tenun' },
-  { id: 'fashion', name: 'Fashion' },
-  { id: 'home', name: 'Dekorasi Rumah' },
-  { id: 'partnership', name: 'Produk Kemitraan' }
-]
-
-const galleryItems: GalleryItemType[] = [
-  { title: 'Kain Tenun Misris', description: 'Kain tenun berkualitas tinggi', category: 'fabric', image: 'https://i.imgur.com/2gMWgmc.jpeg' },
-  { title: 'Semi Sutra Premium', description: 'Kain sutra dengan motif elegan', category: 'fabric', image: 'https://picsum.photos/400/600?random=1' },
-  { title: 'Shal Tenun Elegant', description: 'Shal dengan sentuhan modern', category: 'fashion', image: 'https://picsum.photos/400/600?random=2' },
-  { title: 'Sarung Tenun Tradisional', description: 'Sarung dengan motif klasik', category: 'fashion', image: 'https://picsum.photos/400/600?random=3' },
-  { title: 'Tas Souvenir Unik', description: 'Tas dengan desain khas Kediri', category: 'fashion', image: 'https://picsum.photos/400/600?random=4' },
-  { title: 'Penutup Tisu Cantik', description: 'Dekorasi rumah yang fungsional', category: 'home', image: 'https://picsum.photos/400/600?random=5' },
-  { title: 'Penutup Galon Stylish', description: 'Pelindung galon yang estetik', category: 'home', image: 'https://picsum.photos/400/600?random=6' },
-  { title: 'Sepatu Tenun Ikat', description: 'Kolaborasi dengan UKM Den Yu', category: 'partnership', image: 'https://picsum.photos/400/600?random=7' },
-  { title: 'Tas Premium Gakris', description: 'Kolaborasi dengan UKM Gakris', category: 'partnership', image: 'https://picsum.photos/400/600?random=8' },
-  { title: 'Motif Tradisional', description: 'Ragam motif khas Kediri', category: 'fabric', image: 'https://picsum.photos/400/600?random=9' },
-  { title: 'Proses Pewarnaan', description: 'Teknik pewarnaan tradisional', category: 'fabric', image: 'https://picsum.photos/400/600?random=10' },
-  { title: 'Kain Sutra Import', description: 'Kain sutra berkualitas tinggi', category: 'fabric', image: 'https://picsum.photos/400/600?random=11' }
-]
-
-const processSteps = [
-  {
-    title: 'Persiapan Benang',
-    description: 'Pemilihan dan persiapan benang berkualitas tinggi'
-  },
-  {
-    title: 'Ikat & Celup',
-    description: 'Proses pengikatan dan pencelupan dengan teknik tradisional'
-  },
-  {
-    title: 'Tenun',
-    description: 'Proses menenun dengan alat tenun bukan mesin (ATBM)'
-  },
-  {
-    title: 'Finishing',
-    description: 'Penyelesaian akhir dan quality control produk'
-  }
-]
 
 const filteredGallery = computed(() => {
   if (activeCategory.value === 'all') {

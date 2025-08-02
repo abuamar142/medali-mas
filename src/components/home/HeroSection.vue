@@ -1,5 +1,5 @@
 <template>
-  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-0">
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0">
       <div class="absolute inset-0 bg-gradient-to-br from-amber-900/90 via-orange-800/85 to-red-900/90 z-10"></div>
