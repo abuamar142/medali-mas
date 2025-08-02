@@ -11,6 +11,7 @@
     "title": "Tenun Ikat Medali Mas",
     "subtitle": "Warisan Budaya Kediri Sejak 1989",
     "description": "Melestarikan keindahan tenun ikat tradisional dengan sentuhan modern. Produk berkualitas tinggi dari tangan-tangan terampil pengrajin Kediri.",
+    "description": "Melestarikan keindahan tenun ikat tradisional dengan sentuhan modern. Produk berkualitas tinggi dari tangan-tangan terampil pengrajin Kediri.",
     "cta": {
       "products": "Lihat Produk Kami",
       "contact": "Hubungi Kami"
@@ -283,7 +284,10 @@
     "quickLinks": "Tautan Cepat",
     "contact": "Kontak",
     "followUs": "Ikuti Kami",
-    "copyright": "© 2024 UD. Medali Mas. Semua hak cipta dilindungi."
+    "copyright": "© 2025 UD. Medali Mas. Semua hak cipta dilindungi.",
+    "ukm": "UKM Unggulan Kota Kediri",
+    "traditional": "Tenun Ikat Tradisional",
+    "chatTooltip": "Chat untuk informasi lebih lanjut"
   },
   "common": {
     "loading": "Memuat...",

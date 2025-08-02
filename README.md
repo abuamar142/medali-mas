@@ -1,33 +1,19 @@
 # 🧵 Tenun Ikat Medali Mas
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/your-site/deploys)
-![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?logo=vue.js&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-3.5-4FC08D?logo=vue.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css&logoColor=white)
 
-> Website landing page untuk **UD. Medali Mas** - UMKM unggulan tenun ikat tradisional Kediri
-> sejak 1989.
+> Website modern untuk **UD. Medali Mas** - UMKM tenun ikat tradisional Kediri sejak 1989.
 
-🌐 **Live Site:** [medali-mas.abuamar.site](https://www.medali-mas.abuamar.site)
+🌐 **Live:** [medali-mas.abuamar.site](https://www.medali-mas.abuamar.site)
 
-## ✨ Tentang Medali Mas
+## ✨ Tentang
 
-**UD. Medali Mas** didirikan oleh Bapak Munawar pada 27 Februari 1989 di Kediri, Jawa Timur.
+**UD. Medali Mas** didirikan tahun 1989 di Kediri, Jawa Timur oleh Bapak Munawar. UMKM tenun ikat
+tradisional dengan 35+ tahun pengalaman.
 
-### 🏆 Prestasi
-
-- Upakarti 2010 (Kategori Kepeloporan)
-- UKM Award Parasanya Kerta Nugraha 2008
-- Nominasi Pro Poor Award 2012 (Gubernur Jawa Timur)
-
-### 📊 Statistik
-
-- � **60 Tenaga Kerja**
-- 💰 **100M+ Omset/Bulan**
-- 🌏 **10+ Daerah Pemasaran**
-- ⏰ **35+ Tahun Pengalaman**
-
-## � Quick Start
+## 🚀 Development
 
 ```bash
 # Install dependencies
@@ -42,32 +28,34 @@ npm run build
 
 ## 🛍️ Produk
 
-- **Kain Tenun Ikat** - Misris, Semi Sutra, Sutra Import
+- **Kain Tenun Ikat** - Misris (125K-195K), Semi Sutra (300K), Sutra Import
 - **Fashion** - Shal, Sarung, Tas Souvenir
-- **Dekorasi Rumah** - Penutup Tisu, Galon, Gelas
-- **Produk Kemitraan** - Sepatu, Sandal, Tas Premium
+- **Dekorasi Rumah** - Penutup Tisu, Galon, Aksesoris
+- **Kemitraan** - Sepatu (Den Yu), Tas (Gakris), Dekorasi (Sinar Sejati)
 
-## 📞 Kontak
+## 🌟 Fitur
 
-- 📍 **Alamat:** Jl. KH. Agus Salim Gg. VIII, No. 54 C, Kediri
-- 👤 **Pemilik:** Bapak Munawar
-- 📱 **Instagram:** [@tenunmedalimasofficial](https://www.instagram.com/tenunmedalimasofficial)
+- ✅ Responsive & Mobile-first
+- ✅ Multilingual (ID/EN)
+- ✅ Product Detail Pages
+- ✅ SEO Optimized
+- ✅ Interactive Gallery
+- ✅ WhatsApp Integration
 
 ## 🛠️ Tech Stack
 
 - **Vue.js 3** + TypeScript
-- **Tailwind CSS** - Pure utility classes
-- **Vite** - Build tool
-- **Netlify** - Hosting & deployment
+- **Vue Router** + Vue I18n
+- **Tailwind CSS** + Lucide Icons
+- **Vite** + ESLint
+- **Netlify** hosting
 
-## 🌟 Features
+## Kontak
 
-✅ Responsive design  
-✅ SEO optimized  
-✅ Fast loading  
-✅ Interactive gallery  
-✅ Contact form  
-✅ Social integration
+**Alamat:** Jl. KH. Agus Salim Gg. VIII, No. 54 C, Kediri  
+**Pemilik:** Bapak Munawar  
+**WhatsApp:** [+62 857-3671-2477](https://wa.me/6285736712477)  
+**Instagram:** [@tenunmedalimasofficial](https://www.instagram.com/tenunmedalimasofficial)
 
 ---
 
